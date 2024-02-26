@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('@/assets/fonts/Roboto-Regular');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --font-roboto-regular: 'Roboto-Regular', 'sans-serif';
+
+    --font-size-h1: 64px;
+    --font-size-h2: 18px;
+    --font-size-h3: 32px;
+    --font-size-h4: 24px;
+
+    --font-size-p1: 18px;
+    --font-size-p2: 20px;
+    --font-size-p3: 16px
+}
