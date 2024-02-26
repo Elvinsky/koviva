@@ -7,4 +7,8 @@
     --space-l: 64px;
     --space-xl: 128px;
     --space-2xl: 162px;
+
+    --space-default: 333px;
+    --space-safe: 48px;
+    --space-safe-top: 60px
 }

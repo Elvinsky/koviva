@@ -1,4 +1,8 @@
 @mixin button_p2() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
   width: 100%;
   padding: 10px 40px;
   font-size: 20px;
@@ -8,6 +12,7 @@
   transition: all 0.2s ease;
 
   &:hover {
+    cursor: pointer;
     border: 1.5px solid #1444b4;
     background-color: #1444b4;
     color: white;
@@ -27,7 +32,12 @@
 }
 
 @mixin button_p1() {
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 24px;
+  width: 100%;
   font-size: 18px;
   background-color: white;
   border: 1px solid #1444b4;
@@ -35,6 +45,7 @@
   transition: all 0.2s ease;
 
   &:hover {
+    cursor: pointer;
     border: 1px solid #1444b4;
     background-color: #1444b4;
     color: white;
@@ -54,7 +65,12 @@
 }
 
 @mixin button_i18n() {
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 4px 16px;
+  width: 100%;
   font-size: 16px;
   background-color: white;
   border: 1px solid #454545;
@@ -62,6 +78,7 @@
   transition: all 0.2s ease;
 
   &:hover {
+    cursor: pointer;
     border: 1px solid black;
     background-color: white;
     color: black;
