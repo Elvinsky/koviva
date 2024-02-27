@@ -13,6 +13,7 @@
 
 a {
     text-decoration: none;
+    color: #454545;
 }
 
 a:focus,
@@ -62,15 +63,15 @@ p {
     font-size: var(--font-size-p1);
 }
 
-p.p1 {
+.p1 {
     font-size: var(--font-size-p1);
 }
 
-p.p2 {
+.p2 {
     font-size: var(--font-size-p2);
 }
 
-p.p3 {
+.p3 {
     font-size: var(--font-size-p3);
 }
 

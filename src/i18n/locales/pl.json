@@ -1,5 +1,14 @@
 {
   "general": {
-    "test": "Testi"
+    "test": "Тест"
+  },
+  "nav": {
+    "about": "O Nas",
+    "advantages": "Nasze Zalety",
+    "services": "Nasze Usługi",
+    "faq": "FAQ",
+    "certificates": "Certyfikaty",
+    "gallery": "Galeria",
+    "contacts": "Kontakty"
   }
 }

@@ -1,5 +1,14 @@
 {
   "general": {
     "test": "Тест"
+  },
+  "nav": {
+    "about": "О нас",
+    "advantages": "Преимущества",
+    "services": "Услуги",
+    "faq": "FAQ",
+    "certificates": "Сертификаты",
+    "gallery": "Галерея",
+    "contacts": "Контакты                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
   }
 }

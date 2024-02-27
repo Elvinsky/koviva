@@ -1,5 +1,5 @@
 import './styles/global.css'
-import { createPinia } from 'pinia';
+import { createPinia, storeToRefs } from 'pinia';
 import { createI18n } from 'vue-i18n'
 
 
@@ -11,7 +11,6 @@ const messages = Object.assign(languages)
 
 export const i18n = createI18n({
   legacy: false,
-  locale: 'en-US',
   fallbackLocale: 'en-US',
   messages
 })

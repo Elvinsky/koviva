@@ -3,7 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/eslint-config-typescript',
@@ -40,15 +40,6 @@ module.exports = {
       },
     ],
     'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/ban-types': 'error',
-    '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }],
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-unused-expressions': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/consistent-type-definitions': 'warn',
-    '@typescript-eslint/prefer-function-type': 'warn',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/naming-convention': 'off',
 
     //Eslint
     'no-console': ['error', { allow: ['warn', 'error'] }],
