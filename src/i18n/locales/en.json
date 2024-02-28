@@ -1,6 +1,6 @@
 {
   "general": {
-    "test": "Test"
+    "mainHeader": "Koviva - your reliable partner in liquid cargo transportation across Europe and CIS"
   },
   "nav": {
     "about": "About us",
@@ -10,5 +10,44 @@
     "certificates": "Certificates",
     "gallery": "Gallery",
     "contacts": "Contacts"
+  },
+  "buttons": {
+    "textUs": "Contact Us"
+  },
+  "about": {
+    "header": "About company",
+    "contentCaptionFirstPart": "More than",
+    "contentCaptionSecondPart": "10 years",
+    "contentCaptionThirdPart": "of experience and an individual approach to each client.",
+    "contentInfo": "The Koviva team tackles the most complex logistics challenges with high efficiency, leveraging years of experience. We meticulously plan each shipment, taking into account all the nuances and requirements for your cargo. Thanks to our expertise and cutting-edge technologies, we ensure the safe delivery of cargoes of any complexity."
+  },
+  "advantages": {
+    "advantagesHeaderMain": "Advantages",
+    "advantagesHeaderSecond": "The advantages of working with us:",
+    "circlesText": {
+      "text1": "Unique \n approach",
+      "text2": "Speed",
+      "text3": "Flexibility",
+      "text4": "Experience",
+      "text5": "Reliability"
+    }
+  },
+  "inform": {
+    "firstLine": {
+      "header1PartOne": "10+",
+      "header1PartTwo": " Лет на рынке",
+      "content1": "Мы чётко понимаем потребности клиентов и успешно решаем сложные логистические задачи",
+      "header2PartOne": "35+",
+      "header2PartTwo": " Грузовиков",
+      "content2": "Гибкость и эффективность в решении Ваших логистических задач. Соблюдение требований "
+    },
+    "secondLine": {
+      "header1PartOne": "35+",
+      "header1PartTwo": " Квалифицированных водителей",
+      "content1": "Гарантируем своевременную и безопасную доставку вашего груза благодаря опыту и профессионализму",
+      "header2PartOne": "7000+",
+      "header2PartTwo": " Успешных заказов",
+      "content2": "Гарантируем высокое качество обслуживания и удовлетворенность клиентов"
+    }
   }
 }

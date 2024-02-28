@@ -11,15 +11,18 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   css: {
-  preprocessorOptions: {
-    scss: {
-      additionalData: `
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
         @use "./src/styles/basics/_media.scss" as *;
         @use "./src/styles/basics/_mixins.scss" as *;
       `,
+      },
     },
   },
-},
+  optimizeDeps: {
+    exclude: ['vue3-carousel']
+  },
   plugins: [
     vue(),
     vueJsx(),

@@ -53,6 +53,7 @@
     </header>
     <div class="i18n-buttons">
       <BaseButton
+        variant="i18n"
         class="i18n-buttons__item"
         :selected="lang === 'en-US'"
         @click="changeLang('en-US')"
@@ -60,6 +61,7 @@
         EN
       </BaseButton>
       <BaseButton
+        variant="i18n"
         class="i18n-buttons__item"
         :selected="lang === 'ru-RU'"
         @click="changeLang('ru-RU')"
@@ -67,6 +69,7 @@
         RU
       </BaseButton>
       <BaseButton
+        variant="i18n"
         class="i18n-buttons__item"
         :selected="lang === 'pl-PL'"
         @click="changeLang('pl-PL')"
@@ -79,7 +82,6 @@
 
 <script setup>
   import BaseButton from '../components/common/BaseButton.vue';
-  import { i18n } from '@/main';
   import { useLanguage } from '../composables/useLaguage';
 
   const { lang, changeLang } = useLanguage();
@@ -91,6 +93,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    top: 0;
     justify-content: center;
 
     .header {
@@ -116,6 +119,10 @@
 
         a:hover {
           color: var(--color-black-main);
+        }
+
+        a:focus {
+          color: var(--color-blue-main);
         }
       }
     }

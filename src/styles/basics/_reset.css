@@ -45,17 +45,21 @@ ul li {
 
 h1 {
     font-size: var(--font-size-h1);
+    line-height: 130%;
 }
 
 h2 {
+    line-height: 130%;
     font-size: var(--font-size-h2);
 }
 
 h3 {
+    line-height: 130%;
     font-size: var(--font-size-h3);
 }
 
 h4 {
+    line-height: 130%;
     font-size: var(--font-size-h4);
 }
 

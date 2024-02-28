@@ -1,7 +1,12 @@
 <template>
   <div
     class="button"
-    :class="{ 'button--selected': selected }"
+    :class="{
+      'button--selected': selected,
+      'button--p1': variant === 'p1',
+      'button--p2': variant === 'p2',
+      'button--i18n': variant === 'i18n',
+    }"
   >
     <slot></slot>
   </div>
@@ -22,8 +27,19 @@
 
 <style scoped lang="scss">
   @use '../../styles/basics/mixins';
+
   .button {
-    @include button-i18n();
+    &--i18n {
+      @include button-i18n();
+    }
+
+    &--p1 {
+      @include button-p1();
+    }
+
+    &--p2 {
+      @include button-p2();
+    }
 
     &--selected {
       border: 1px solid black;

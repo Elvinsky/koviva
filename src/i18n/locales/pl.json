@@ -1,6 +1,6 @@
 {
   "general": {
-    "test": "Тест"
+    "mainHeader": "Koviva - Twój niezawodny partner w transporcie ładunków płynnych na terenie całej Europy i WNP"
   },
   "nav": {
     "about": "O Nas",
@@ -10,5 +10,44 @@
     "certificates": "Certyfikaty",
     "gallery": "Galeria",
     "contacts": "Kontakty"
+  },
+  "buttons": {
+    "textUs": "Napisz do nas"
+  },
+  "about": {
+    "header": "O firmie",
+    "contentCaptionFirstPart": "Ponad",
+    "contentCaptionSecondPart": "10 lat",
+    "contentCaptionThirdPart": "doświadczenia i indywidualne podejście do każdego klienta.",
+    "contentInfo": "Zespół Koviva rozwiązuje najbardziej złożone zadania logistyczne z wysoką skutecznością, wykorzystując wieloletnie doświadczenie. Starannie planujemy każdy transport, uwzględniając wszystkie szczegóły i wymagania dotyczące Państwa ładunków. Dzięki naszej wysokiej wiedzy eksperckiej i zaawansowanym technologiom, zapewniamy bezpieczną dostawę ładunków o każdym stopniu trudności"
+  },
+  "advantages": {
+    "advantagesHeaderMain": "Nasze zalety",
+    "advantagesHeaderSecond": "Zalety współpracy z nami:",
+    "circlesText": {
+      "text1": "Zaufanie \n Podejście",
+      "text2": "Szybkość",
+      "text3": "Elastyczność",
+      "text4": "Zaufanie",
+      "text5": "Doświadczenie"
+    }
+  },
+  "inform": {
+    "firstLine": {
+      "header1PartOne": "10+",
+      "header1PartTwo": " Lat na rynku",
+      "content1": "We clearly understand our clients' needs and \n successfully solve complex logistical challenges",
+      "header2PartOne": "35+",
+      "header2PartTwo": " Сiężarówek",
+      "content2": "Flexibility and efficiency in solving your logistical challenges. Meeting transport requirements and ensuring punctuality"
+    },
+    "secondLine": {
+      "header1PartOne": "35+",
+      "header1PartTwo": " Wykwalifikowanych kierowców",
+      "content1": "We guarantee timely and safe delivery of your cargo thanks to our experience and professionalism",
+      "header2PartOne": "7000+",
+      "header2PartTwo": " Udanych zamówień",
+      "content2": "We guarantee high-quality service and customer satisfaction"
+    }
   }
 }

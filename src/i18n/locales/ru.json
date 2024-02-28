@@ -1,6 +1,6 @@
 {
   "general": {
-    "test": "Тест"
+    "mainHeader": "Koviva - Ваш надежный партнер в перевозке наливных грузов по Европе и СНГ"
   },
   "nav": {
     "about": "О нас",
@@ -10,5 +10,44 @@
     "certificates": "Сертификаты",
     "gallery": "Галерея",
     "contacts": "Контакты                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
+  },
+  "buttons": {
+    "textUs": "Напишите нам"
+  },
+  "about": {
+    "header": "О компании",
+    "contentCaptionFirstPart": "Более",
+    "contentCaptionSecondPart": "10 лет",
+    "contentCaptionThirdPart": "опыта и индивидуальный подход к каждому клиенту.",
+    "contentInfo": "Команда Koviva решает самые сложные логистические задачи с высокой эффективностью, используя многолетний опыт. Мы тщательно планируем каждую перевозку, учитывая все особенности и требования к вашим грузам. Благодаря высокой экспертизе и передовым технологиям, мы гарантируем безопасную доставку грузов любой сложности."
+  },
+  "advantages": {
+    "advantagesHeaderMain": "Наши преимущества",
+    "advantagesHeaderSecond": "Преимущества работы с нами:",
+    "circlesText": {
+      "text1": "Уникальный \n подход",
+      "text2": "Скорость",
+      "text3": "Гибкость",
+      "text4": "Опыт",
+      "text5": "Надежность"
+    }
+  },
+  "inform": {
+    "firstLine": {
+      "header1PartOne": "10+",
+      "header1PartTwo": " Years on the market",
+      "content1": "We clearly understand our clients' needs and \n successfully solve complex logistical challenges",
+      "header2PartOne": "35+",
+      "header2PartTwo": " Trucks",
+      "content2": "Flexibility and efficiency in solving your logistical challenges. Meeting transport requirements and ensuring punctuality"
+    },
+    "secondLine": {
+      "header1PartOne": "35+",
+      "header1PartTwo": " Qualified drivers",
+      "content1": "We guarantee timely and safe delivery of your cargo thanks to our experience and professionalism",
+      "header2PartOne": "7000+",
+      "header2PartTwo": " Successful orders",
+      "content2": "We guarantee high-quality service and customer satisfaction"
+    }
   }
 }
