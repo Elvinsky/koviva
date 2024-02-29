@@ -71,5 +71,17 @@
     "liechtenstein": "Liechtenstein",
     "slovenia": "Slovenia",
     "greece": "Greece"
+  },
+  "services": {
+    "header": "Services",
+    "infoCaption": "Comprehensive solutions for reliable and safe delivery of your cargo.",
+    "infoContent": "We provide a full range of services for transporting bulk cargoes in Europe and the CIS with a guarantee of reliability and safety",
+    "service1": "Transportation of liquid dangerous goods",
+    "service2": "Transportation of bulk chemical products",
+    "service3": "Transportation of liquid food cargo",
+    "service4": "Transportation of liquid veterinary cargo",
+    "service5": "Delivery of various types of semi-trailers",
+    "service6": "Logistics services",
+    "service7": "Selection and sale of equipment from Europe"
   }
 }

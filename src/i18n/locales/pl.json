@@ -36,18 +36,18 @@
     "firstLine": {
       "header1PartOne": "10+",
       "header1PartTwo": " Lat na rynku",
-      "content1": "We clearly understand our clients' needs and \n successfully solve complex logistical challenges",
+      "content1": "Doskonale rozumiemy potrzeby klientów i skutecznie rozwiązujemy trudne zadania logistyczne",
       "header2PartOne": "35+",
       "header2PartTwo": " Сiężarówek",
-      "content2": "Flexibility and efficiency in solving your logistical challenges. Meeting transport requirements and ensuring punctuality"
+      "content2": "Elastyczność i efektywność w rozwiązywaniu Państwa logistycznych wyzwań. Spełnienie wymagań i terminowość przewozów"
     },
     "secondLine": {
       "header1PartOne": "35+",
       "header1PartTwo": " Wykwalifikowanych kierowców",
-      "content1": "We guarantee timely and safe delivery of your cargo thanks to our experience and professionalism",
+      "content1": "Gwarantujemy terminową i bezpieczną dostawę Państwa ładunku dzięki naszemu doświadczeniu i profesjonalizmowi",
       "header2PartOne": "7000+",
       "header2PartTwo": " Udanych zamówień",
-      "content2": "We guarantee high-quality service and customer satisfaction"
+      "content2": "Gwarantujemy wysoką jakość obsługi i zadowolenie klientów"
     }
   },
   "countries": {
@@ -71,5 +71,17 @@
     "liechtenstein": "Liechtenstein",
     "slovenia": "Slovenia",
     "greece": "Greece"
+  },
+  "services": {
+    "header": "Nasze usługi",
+    "infoCaption": "Oferujemy kompleksowe rozwiązania zapewniające bezpieczną i niezawodną dostawę Państwa ładunków.",
+    "infoContent": "Zapewniamy pełen zakres usług transportu płynnych towarów w Europie i na obszarze WNP, zapewniając niezawodność i bezpieczeństwo",
+    "service1": "Transport niebezpiecznych płynnych towarów",
+    "service2": "Transport płynnych produktów chemicznych",
+    "service3": "Transport płynnych ładunków spożywczych",
+    "service4": "Transport płynnych produktów weterynaryjnych",
+    "service5": "Transport różnych typów naczep",
+    "service6": "Usługi logistyczne",
+    "service7": "Selekcja i sprzedaż sprzętu z Europy"
   }
 }
