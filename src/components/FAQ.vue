@@ -13,11 +13,42 @@
         <template #content>{{ $t(faq.content) }}</template>
       </FAQWrapper>
     </div>
+    <div class="faq__more">
+      <h1>{{ $t('faq.moreQuestions') }}</h1>
+      <div class="faq__more__content">
+        <p class="p2">
+          {{ $t('faq.moreQuestionsContent') }}
+        </p>
+        <BaseButton
+          class="faq__more__content__button"
+          variant="p1"
+        >
+          <div class="faq__more__content__button__content">
+            <p>{{ $t('buttons.textUs') }}</p>
+            <GreaterThenIcon
+              stroke-width="1.5px"
+              fill="#1444B4"
+            />
+          </div>
+        </BaseButton>
+      </div>
+    </div>
+    <div class="faq__content">
+      <FAQWrapper
+        v-for="faq in faqs"
+        :key="faq.id"
+      >
+        <template #default>{{ $t(faq.header) }}</template>
+        <template #content>{{ $t(faq.content) }}</template>
+      </FAQWrapper>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import GreaterThenIcon from '@/assets/icons/Utility/GreaterThenIcon.vue';
   import FAQWrapper from './FAQWrapper.vue';
+  import BaseButton from './common/BaseButton.vue';
 
   const faqs = [
     {
@@ -74,6 +105,55 @@
 
     &__content {
       width: 100%;
+    }
+
+    &__more {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background-color: #efefef;
+      border-radius: var(--space-s);
+      padding: var(--space-ml);
+      margin-top: var(--space-l);
+      margin-bottom: var(--space-l);
+
+      h1 {
+        color: var(--color-blue-main);
+        max-width: 270px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: var(--space-m);
+        max-width: 450px;
+
+        &__button {
+          width: fit-content;
+
+          &:hover {
+            ::v-deep(path) {
+              stroke: var(--color-white-main);
+            }
+          }
+
+          &__content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-s);
+
+            p {
+              line-height: 120%;
+            }
+          }
+        }
+      }
     }
   }
 </style>
