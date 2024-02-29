@@ -49,5 +49,27 @@
       "header2PartTwo": " Udanych zamówień",
       "content2": "We guarantee high-quality service and customer satisfaction"
     }
+  },
+  "countries": {
+    "switzerland": "Switzerland",
+    "poland": "Poland",
+    "germany": "Germany",
+    "italy": "Italy",
+    "spain": "Spain",
+    "uzbekistan": "Uzbekistan",
+    "kazakhstan": "Kazakhstan",
+    "turkey": "Turkey",
+    "belarus": "Belarus",
+    "czechRepublic": "Czech Republic",
+    "france": "France",
+    "austria": "Austria",
+    "belgium": "Belgium",
+    "lithuania": "Lithuania",
+    "romania": "Romania",
+    "slovakia": "Slovakia",
+    "moldova": "Moldova",
+    "liechtenstein": "Liechtenstein",
+    "slovenia": "Slovenia",
+    "greece": "Greece"
   }
 }

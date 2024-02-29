@@ -49,5 +49,27 @@
       "header2PartTwo": " Successful orders",
       "content2": "We guarantee high-quality service and customer satisfaction"
     }
+  },
+  "countries": {
+    "switzerland": "Швейцария",
+    "poland": "Польша",
+    "germany": "Германия",
+    "italy": "Италия",
+    "spain": "Испания",
+    "uzbekistan": "Узбекистан",
+    "kazakhstan": "Казахстан",
+    "turkey": "Турция",
+    "belarus": "Беларусь",
+    "czechRepublic": "Чешская Республика",
+    "france": "Франция",
+    "austria": "Австрия",
+    "belgium": "Бельгия",
+    "lithuania": "Литва",
+    "romania": "Румыния",
+    "slovakia": "Славакия",
+    "moldova": "Молдова",
+    "liechtenstein": "Лихтенштейн",
+    "slovenia": "Словения",
+    "greece": "Греция"
   }
 }

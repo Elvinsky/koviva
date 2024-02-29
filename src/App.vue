@@ -18,6 +18,7 @@
       <img
         src="/tanker_truck.png"
         alt="koviva-truck"
+        class=""
       />
     </div>
     <div class="wrapper__about">
@@ -44,16 +45,16 @@
             <h2>{{ $t('advantages.circlesText.text1') }}</h2>
           </div>
           <div class="wrapper__advantages__content__circled-text__item">
-            <h2>{{ $t('advantages.circlesText.text1') }}</h2>
+            <h2>{{ $t('advantages.circlesText.text2') }}</h2>
           </div>
           <div class="wrapper__advantages__content__circled-text__item">
-            <h2>{{ $t('advantages.circlesText.text1') }}</h2>
+            <h2>{{ $t('advantages.circlesText.text3') }}</h2>
           </div>
           <div class="wrapper__advantages__content__circled-text__item">
-            <h2>{{ $t('advantages.circlesText.text1') }}</h2>
+            <h2>{{ $t('advantages.circlesText.text4') }}</h2>
           </div>
           <div class="wrapper__advantages__content__circled-text__item">
-            <h2>{{ $t('advantages.circlesText.text1') }}</h2>
+            <h2>{{ $t('advantages.circlesText.text5') }}</h2>
           </div>
         </div>
         <div class="wrapper__advantages__content__info">
@@ -101,16 +102,18 @@
       </div>
     </div>
     <div class="wrapper__country-slider">
-      <Carousel :items-to-show="2">
+      <Carousel
+        :items-to-show="3"
+        mouse-drag
+      >
         <Slide
-          v-for="slide in 10"
-          :key="slide"
+          v-for="slide in slides"
+          :key="slide.id"
         >
-          <img
-            src="/public/tanker_truck.png"
-            width="200px"
-            height="200px"
-          />
+          <div class="wrapper__country-slider__item">
+            <component :is="slide.component" />
+            <p class="p1">{{ $t(`countries.${slide.caption}`) }}</p>
+          </div>
         </Slide>
 
         <template #addons>
@@ -125,15 +128,139 @@
 <script setup>
   import 'vue3-carousel/dist/carousel.css';
   import HeaderComponent from '@/components/HeaderComponent.vue';
+  import { computed } from 'vue';
   import { onMounted } from 'vue';
   import { i18n } from './main';
+  import Switzerland from './assets/icons/Countries/Switzerland.vue';
   import BaseButton from './components/common/BaseButton.vue';
   import GreaterThenIcon from './assets/icons/Utility/GreaterThenIcon.vue';
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+  import Poland from './assets/icons/Countries/Poland.vue';
+  import Germany from './assets/icons/Countries/Germany.vue';
+  import Italy from './assets/icons/Countries/Italy.vue';
+  import Spain from './assets/icons/Countries/Spain.vue';
+  import Uzbekistan from './assets/icons/Countries/Uzbekistan.vue';
+  import Kazakhstan from './assets/icons/Countries/Kazakhstan.vue';
+  import Turkey from './assets/icons/Countries/Turkey.vue';
+  import Belarus from './assets/icons/Countries/Belarus.vue';
+  import CzechRepublic from './assets/icons/Countries/CzechRepublic.vue';
+  import France from './assets/icons/Countries/France.vue';
+  import Austria from './assets/icons/Countries/Austria.vue';
+  import Belgium from './assets/icons/Countries/Belgium.vue';
+  import Lithuania from './assets/icons/Countries/Lithuania.vue';
+  import Romania from './assets/icons/Countries/Romania.vue';
+  import Slovakia from './assets/icons/Countries/Slovakia.vue';
+  import Moldova from './assets/icons/Countries/Moldova.vue';
+  import Liechtenstein from './assets/icons/Countries/Liechtenstein.vue';
+  import Slovenia from './assets/icons/Countries/Slovenia.vue';
+  import Greece from './assets/icons/Countries/Greece.vue';
 
   onMounted(() => {
     i18n.global.locale.value = localStorage.getItem('lang');
   });
+
+  const slides = computed(() => [
+    {
+      id: '1',
+      caption: 'switzerland',
+      component: Switzerland,
+    },
+    {
+      id: '2',
+      caption: 'poland',
+      component: Poland,
+    },
+    {
+      id: '3',
+      caption: 'germany',
+      component: Germany,
+    },
+    {
+      id: '4',
+      caption: 'italy',
+      component: Italy,
+    },
+    {
+      id: '5',
+      caption: 'spain',
+      component: Spain,
+    },
+    {
+      id: '6',
+      caption: 'uzbekistan',
+      component: Uzbekistan,
+    },
+    {
+      id: '7',
+      caption: 'kazakhstan',
+      component: Kazakhstan,
+    },
+    {
+      id: '8',
+      caption: 'turkey',
+      component: Turkey,
+    },
+    {
+      id: '9',
+      caption: 'belarus',
+      component: Belarus,
+    },
+    {
+      id: '10',
+      caption: 'czechRepublic',
+      component: CzechRepublic,
+    },
+    {
+      id: '11',
+      caption: 'france',
+      component: France,
+    },
+    {
+      id: '12',
+      caption: 'austria',
+      component: Austria,
+    },
+    {
+      id: '13',
+      caption: 'belgium',
+      component: Belgium,
+    },
+    {
+      id: '14',
+      caption: 'lithuania',
+      component: Lithuania,
+    },
+    {
+      id: '15',
+      caption: 'romania',
+      component: Romania,
+    },
+    {
+      id: '16',
+      caption: 'slovakia',
+      component: Slovakia,
+    },
+    {
+      id: '17',
+      caption: 'moldova',
+      component: Moldova,
+    },
+    {
+      id: '18',
+      caption: 'liechtenstein',
+      component: Liechtenstein,
+    },
+    {
+      id: '19',
+      caption: 'slovenia',
+      component: Slovenia,
+    },
+    {
+      id: '18',
+      caption: 'greece',
+      component: Greece,
+    },
+  ]);
 </script>
 
 <style scoped lang="scss">
@@ -147,12 +274,21 @@
     background-color: var(--color-gray-lighter);
     gap: var(--space-l);
 
+    @include w-max(1600px) {
+      padding: var(--space-safe-top) 200px;
+    }
+
     &__header-text {
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: start;
       gap: var(--space-sm);
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
 
       &__button {
         width: fit-content;
@@ -264,6 +400,11 @@
             border-radius: 50%;
             background-color: var(--color-white-main);
 
+            @include w-max(1600px) {
+              width: 220px;
+              height: 220px;
+            }
+
             &:nth-child(2) {
               transform: translateX(calc(-1 * var(--space-m)));
             }
@@ -275,6 +416,11 @@
             }
             &:nth-child(5) {
               transform: translateX(calc(-4 * var(--space-m)));
+            }
+
+            h2 {
+              max-width: 100px;
+              text-align: center;
             }
           }
         }
@@ -317,9 +463,24 @@
       padding-top: var(--space-m);
       display: flex;
       flex-direction: column;
-      align-items: start;
-      justify-content: start;
       width: 100%;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-ml);
+      }
     }
+  }
+
+  .carousel {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .carousel__slide {
+    width: 100%;
   }
 </style>
