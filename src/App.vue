@@ -6,6 +6,7 @@
     <Advantages />
     <CountrySlider />
     <Services />
+    <FAQ />
   </div>
 </template>
 
@@ -19,6 +20,7 @@
   import Services from './components/Services.vue';
   import HeaderText from './components/HeaderText.vue';
   import CountrySlider from './components/CountrySlider.vue';
+  import FAQ from './components/FAQ.vue';
 
   onMounted(() => {
     i18n.global.locale.value = localStorage.getItem('lang');
