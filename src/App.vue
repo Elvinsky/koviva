@@ -2,14 +2,14 @@
   <div class="wrapper">
     <HeaderComponent />
     <HeaderText />
-    <About />
-    <Advantages />
-    <CountrySlider />
-    <Services />
-    <FAQ />
-    <Galery />
-    <ContactUsForm />
-    <Contacts />
+    <About id="about" />
+    <Advantages id="advantages" />
+    <CountrySlider id="countries" />
+    <Services id="services" />
+    <FAQ id="faq" />
+    <Galery id="galery" />
+    <ContactUsForm id="contactus" />
+    <Contacts id="contacts" />
     <FooterComponent />
   </div>
 </template>

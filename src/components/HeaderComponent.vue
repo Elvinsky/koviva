@@ -8,43 +8,50 @@
       />
       <nav class="header__nav">
         <a
-          href="#"
+          @click.prevent="smoothScroll('about')"
+          href="#about"
           class="p1"
         >
           {{ $t('nav.about') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('advantages')"
+          href="#advantages"
           class="p1"
         >
           {{ $t('nav.advantages') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('services')"
+          href="#services"
           class="p1"
         >
           {{ $t('nav.services') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('faq')"
+          href="#faq"
           class="p1"
         >
           {{ $t('nav.faq') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('faq')"
+          href="#faq"
           class="p1"
         >
           {{ $t('nav.certificates') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('galery')"
+          href="#galery"
           class="p1"
         >
           {{ $t('nav.gallery') }}
         </a>
         <a
-          href="#"
+          @click.prevent="smoothScroll('contacts')"
+          href="#contacts"
           class="p1"
         >
           {{ $t('nav.contacts') }}
@@ -85,6 +92,18 @@
   import { useLanguage } from '../composables/useLaguage';
 
   const { lang, changeLang } = useLanguage();
+
+  const smoothScroll = targetId => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 </script>
 
 <style scoped lang="scss">
