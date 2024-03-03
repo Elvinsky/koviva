@@ -53,6 +53,11 @@
       padding: var(--space-safe-top) 200px;
     }
 
+    @include w-max($xl) {
+      padding-left: var(--space-safe-top);
+      padding-right: var(--space-safe-top);
+    }
+
     &__country-slider {
       padding-top: var(--space-m);
       display: flex;
