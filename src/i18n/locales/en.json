@@ -98,5 +98,27 @@
     "answer5": "To receive a personalized quote, please fill out the feedback form on our website or contact us by phone or email. We will need details of your shipment, including the type of cargo, volume, point of origin and destination, so that we can provide you with the most accurate estimate.",
     "moreQuestions": "Still have questions?",
     "moreQuestionsContent": "Our team is always ready to answer your questions.Please feel free to contact us if you have any inquiries."
+  },
+  "galery":{
+    "header":"Galery"
+  },
+  "contactus":{
+    "header":"Let's keep in touch!",
+    "subheader":"Application form",
+    "content":"Here you can leave your contact information and ask any questions you may have or submit a request for cargo transportation.",
+    "name":"First name",
+    "surname":"Second name",
+    "tel":"Phone number",
+    "email":"Email",
+    "msg":"Message",
+    "submit":"Send"   
+  },
+  "contacts":{
+    "header":"Contacts",
+    "subheader":"Koviva - professionalism and reliability in every order!",
+    "tel":"Phone numbers:",
+    "adress":"Address:",
+    "adressContent":"Chełmżynska 180A, 04-464, Warsaw, Poland",
+    "email":"Email:"
   }
 }

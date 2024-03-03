@@ -86,17 +86,39 @@
   },
   "faq": {
     "header": "FAQ",
-    "question1": "What types of bulk cargoes do you transport?",
-    "question2": "What types of bulk cargoes do you transport?",
-    "question3": "What are your delivery times?",
-    "question4": "What documents are required for arranging the transportation of bulk cargoes?",
-    "question5": "How can I get a cost estimate for transportation?",
-    "answer1": "We specialize in transporting a wide range of bulk cargoes, including petroleum products, chemicals, food liquids, and other materials that require a special approach to transportation. Our company strictly adheres to all safety measures to ensure the integrity of your cargo.",
-    "answer2": "Cargo safety is our priority. We use modern fleets with specialized equipment, regularly conduct checks and training for our drivers, and adhere to strict international and local safety norms and standards for each type of cargo.",
-    "answer3": "Delivery times depend on various factors, including distance, type of cargo, and road conditions. We strive to offer the most optimal and efficient routes to ensure timely delivery. For more accurate information, please contact us with the details of your request.",
-    "answer4": "To arrange the transportation of bulk cargoes, a number of documents are required, including but not limited to, a bill of lading, accompanying documents for the cargo, documents confirming its characteristics and safety for transportation, as well as documents required by customs and regulatory authorities of the countries of departure and destination.",
-    "answer5": "To receive a personalized quote, please fill out the feedback form on our website or contact us by phone or email. We will need details of your shipment, including the type of cargo, volume, point of origin and destination, so that we can provide you with the most accurate estimate.",
-    "moreQuestions": "Still have questions?",
-    "moreQuestionsContent": "Our team is always ready to answer your questions.Please feel free to contact us if you have any inquiries."
+    "question1": "Jakie rodzaje ładunków masowych transportujecie?",
+    "question2": "Jakie środki bezpieczeństwa stosujecie podczas transportu?",
+    "question3": "Jakie są wasze terminy dostawy?",
+    "question4": "Jakie dokumenty są wymagane do zorganizowania transportu ładunków masowych?",
+    "question5": "Jak mogę otrzymać wycenę kosztów transportu?",
+    "answer1": "Specjalizujemy się w transporcie szerokiego zakresu ładunków masowych, w tym produktów naftowych, substancji chemicznych, płynów spożywczych i innych materiałów, które wymagają specjalnego podejścia do transportu. Nasza firma ściśle przestrzega wszystkich środków bezpieczeństwa, aby zagwarantować integralność Państwa ładunku.",
+    "answer2": "Bezpieczeństwo ładunków jest naszym priorytetem. Korzystamy z nowoczesnych flot z wyspecjalizowanym sprzętem, regularnie przeprowadzamy kontrole i szkolenia dla naszych kierowców oraz przestrzegamy ścisłych międzynarodowych i lokalnych norm i standardów bezpieczeństwa dla każdego rodzaju ładunków.",
+    "answer3": "Terminy dostawy zależą od wielu czynników, w tym odległości, rodzaju ładunku i warunków na drogach. Staramy się zapewnić najbardziej optymalne i efektywne trasy, aby zapewnić terminową dostawę. Aby uzyskać bardziej dokładne informacje, prosimy o kontakt z nami podając szczegóły zapytania.",
+    "answer4": "Do zorganizowania transportu ładunków masowych wymagane są pewne dokumenty, w tym m.in. list przewozowy, dokumenty towarzyszące ładunkowi, dokumenty potwierdzające jego cechy i bezpieczeństwo podczas transportu, a także dokumenty wymagane przez organy celne i regulacyjne kraju wysyłki i docelowego.",
+    "answer5": "Aby otrzymać indywidualną wycenę, prosimy o wypełnienie formularza opinii na naszej stronie internetowej lub kontakt podając dane o przesyłce, w tym rodzaj ładunku, objętość, punkt początkowy i docelowy, abyśmy mogli zapewnić Państwu jak najbardziej dokładną wycenę.",
+    "moreQuestions": "Nadal są pytania?",
+    "moreQuestionsContent": "Nasz zespół jest zawsze gotowy odpowiedzieć na Państwa pytania. Proszę napisać do nas, jeśli mają Państwo jakiekolwiek pytania"
+  },
+  "galery":{
+    "header":"Galeria"
+  },
+  "contactus":{
+    "header":"Bądźmy w kontakcie",
+    "subheader":"Formularz zgłoszeniowy",
+    "content":"Tutaj możesz zostawić swoje dane kontaktowe oraz zadać dowolne pytanie lub złożyć wniosek o wykonanie przewozu towarowego",
+    "name":"Imię",
+    "surname":"Nazwisko",
+    "tel":"Numer telefonu",
+    "email":"Email",
+    "msg":"Wiadomość",
+    "submit":"Wyślij"   
+  },
+  "contacts":{
+    "header":"Kontakt",
+    "subheader":"Koviva - profesjonalizm i niezawodność w każdym zamówieniu!",
+    "tel":"Numery telefonów:",
+    "adress":"Addres:",
+    "adressContent":"Chełmżynska 180A, 04-464, Warszawa, Polska",
+    "email":"Email:"
   }
 }

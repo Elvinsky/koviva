@@ -7,6 +7,10 @@
     <CountrySlider />
     <Services />
     <FAQ />
+    <Galery />
+    <ContactUsForm />
+    <Contacts />
+    <FooterComponent />
   </div>
 </template>
 
@@ -21,6 +25,10 @@
   import HeaderText from './components/HeaderText.vue';
   import CountrySlider from './components/CountrySlider.vue';
   import FAQ from './components/FAQ.vue';
+  import Galery from './components/Galery.vue';
+  import ContactUsForm from './components/ContactUsForm.vue';
+  import Contacts from './components/Contacts.vue';
+  import FooterComponent from './components/FooterComponent.vue';
 
   onMounted(() => {
     i18n.global.locale.value = localStorage.getItem('lang');
@@ -33,7 +41,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--space-safe-top) var(--space-default);
+    padding-left: var(--space-default);
+    padding-right: var(--space-default);
+    padding-top: var(--space-safe-top);
+    padding-bottom: var(--space-m);
     width: 100%;
     background-color: var(--color-gray-lighter);
     gap: var(--space-l);
