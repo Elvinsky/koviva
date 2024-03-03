@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="country-slider">
     <Carousel
       :items-to-show="3"
@@ -173,8 +173,4 @@
   .carousel__slide {
     width: 100%;
   }
-</style> -->
-
-<template>
-  <p>Hello</p>
-</template>
+</style>
