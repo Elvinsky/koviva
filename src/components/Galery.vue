@@ -3,7 +3,7 @@
     <div class="galery__header">
       <h2>{{ $t('galery.header') }}</h2>
     </div>
-    <div class="galery__slider">
+    <!-- <div class="galery__slider">
       <Carousel
         :items-to-show="2"
         mouse-drag
@@ -23,7 +23,7 @@
           <Pagination />
         </template>
       </Carousel>
-    </div>
+    </div> -->
   </div>
 </template>
 
