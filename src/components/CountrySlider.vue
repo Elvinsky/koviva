@@ -174,3 +174,7 @@
     width: 100%;
   }
 </style> -->
+
+<template>
+  <p>Hello</p>
+</template>
