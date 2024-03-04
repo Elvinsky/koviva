@@ -1,4 +1,16 @@
 <template>
+  <div></div>
+</template>
+
+<script setup lang="ts">
+  // Your script code here
+</script>
+
+<style scoped lang="scss">
+  // Your style code here
+</style>
+
+<!-- <template>
   <div class="galery">
     <div class="galery__header">
       <h2>{{ $t('galery.header') }}</h2>
@@ -99,4 +111,4 @@
   .carousel__slide {
     width: 100%;
   }
-</style>
+</style> -->

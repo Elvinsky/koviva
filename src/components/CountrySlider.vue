@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="country-slider">
     <Carousel
       :items-to-show="3"
@@ -173,4 +173,15 @@
   .carousel__slide {
     width: 100%;
   }
+</style> -->
+<template>
+  <div></div>
+</template>
+
+<script setup lang="ts">
+  // Your script code here
+</script>
+
+<style scoped lang="scss">
+  // Your style code here
 </style>
