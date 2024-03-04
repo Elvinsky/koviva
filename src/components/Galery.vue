@@ -33,32 +33,32 @@
   const slides = [
     {
       id: '1',
-      img: '/public/diploma.png',
+      img: '/diploma.png',
       alt: 'galety-item-1',
     },
     {
       id: '2',
-      img: '/public/Photo_1.png',
+      img: '/Photo_1.png',
       alt: 'galety-item-2',
     },
     {
       id: '3',
-      img: '/public/Photo_2.png',
+      img: '/Photo_2.png',
       alt: 'galety-item-3',
     },
     {
       id: '3',
-      img: '/public/Photo_3.png',
+      img: '/Photo_3.png',
       alt: 'galety-item-3',
     },
     {
       id: '4',
-      img: '/public/Photo_4.png',
+      img: '/Photo_4.png',
       alt: 'galety-item-4',
     },
     {
       id: '5',
-      img: '/public/Photo_5.png',
+      img: '/Photo_5.png',
       alt: 'galety-item-5',
     },
   ];
