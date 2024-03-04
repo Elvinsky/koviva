@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID
+  apiKey: "AIzaSyADsypCRGWOMQ3-D1f26NyK6CwinulmSC0",
+  authDomain: "koviva-355ad.firebaseapp.com",
+  projectId: "koviva-355ad",
+  storageBucket: "koviva-355ad.appspot.com",
+  messagingSenderId: "29850838045",
+  appId: "1:29850838045:web:10c1a48fe3fed6ded492f4"
 };
 
 // Initialize Firebase
