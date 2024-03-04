@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+  import 'vue3-carousel/dist/carousel.css';
   import HeaderComponent from '@/components/HeaderComponent.vue';
   import { onMounted } from 'vue';
   import { i18n } from './main';

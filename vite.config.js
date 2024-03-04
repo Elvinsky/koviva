@@ -24,11 +24,7 @@ export default defineConfig({
     exclude: ['vue3-carousel']
   },
   plugins: [
-    vue(),
-    vueJsx(),
-    VueI18nPlugin({
-      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),
-    }),
+    vue()
   ],
   resolve: {
     alias: {
