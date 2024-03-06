@@ -9,6 +9,8 @@
       wrapAround
       :items-to-show="3"
       mouse-drag
+      :autoplay="900"
+      :transition="1000"
     >
       <Slide
         v-for="slide in slides"
@@ -74,7 +76,7 @@
 
     &__header {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-xs);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: start;
       justify-content: start;
@@ -86,6 +88,7 @@
       display: flex;
       align-items: start;
       justify-content: start;
+      margin-top: -12px;
 
       &:hover {
         cursor: grab;

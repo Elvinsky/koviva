@@ -4,6 +4,8 @@
       wrapAround
       :items-to-show="5"
       mouse-drag
+      :autoplay="900"
+      :transition="1000"
     >
       <Slide
         v-for="slide in slides"

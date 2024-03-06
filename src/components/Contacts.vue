@@ -68,7 +68,7 @@
 
     &__header {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-xs);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: start;
       justify-content: start;
@@ -97,7 +97,7 @@
         width: 100%;
         align-items: start;
         justify-content: space-between;
-        background-color: #f3f3f3;
+        background-color: var(--color-gray-lighter);
         border-radius: var(--space-s);
       }
 

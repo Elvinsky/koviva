@@ -29,7 +29,7 @@
 
     &__header {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-xs);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: start;
       justify-content: start;

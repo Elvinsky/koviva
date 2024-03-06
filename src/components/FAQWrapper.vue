@@ -3,6 +3,7 @@
     class="faq-wrapper"
     @click="closed = !closed"
     :class="{
+      'faq-wrapper--border-bottom-thick': thicken === 'bottom',
       'faq-wrapper--border-both': border === 'both',
       'faq-wrapper--border-dark': !closed,
     }"
@@ -69,6 +70,7 @@
       flex-direction: row;
       width: 100%;
       align-items: center;
+      color: var(--color-gray-main);
       justify-content: space-between;
     }
 
@@ -76,6 +78,7 @@
       display: flex;
       flex-direction: column;
       align-items: start;
+      color: var(--color-gray-main);
       justify-content: start;
 
       p {
@@ -89,6 +92,15 @@
     }
 
     &--border-dark {
+      border-top: 1px solid var(--color-black-main);
+      border-bottom: 1px solid var(--color-black-main);
+
+      .faq-wrapper__activator {
+        color: var(--color-black-main);
+      }
+    }
+
+    &:hover {
       border-top: 1px solid var(--color-black-main);
       border-bottom: 1px solid var(--color-black-main);
     }

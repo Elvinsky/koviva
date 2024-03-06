@@ -2,6 +2,7 @@
   <BaseButton
     class="button"
     variant="p1"
+    @click.prevent="smoothScroll('contactus')"
   >
     <div class="button__content">
       <p>{{ $t('buttons.textUs') }}</p>
@@ -17,7 +18,17 @@
   import GreaterThenIcon from '@/assets/icons/Utility/GreaterThenIcon.vue';
   import BaseButton from './BaseButton.vue';
 
-  // Your script code here
+  const smoothScroll = targetId => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 </script>
 
 <style scoped lang="scss">

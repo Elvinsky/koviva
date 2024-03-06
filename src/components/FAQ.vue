@@ -3,9 +3,10 @@
     <div class="faq__header">
       <h2>{{ $t('faq.header') }}</h2>
     </div>
-    <h3>Some info</h3>
+    <h3>{{ $t('faq.subheader') }}</h3>
     <div class="faq__content">
       <FAQWrapper
+        class="faq__content__item"
         v-for="faq in faqs"
         :key="faq.id"
       >
@@ -70,7 +71,7 @@
 
 <style scoped lang="scss">
   .faq {
-    padding-top: var(--space-l);
+    padding-top: 98px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -85,7 +86,7 @@
 
     &__header {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-xs);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: start;
       justify-content: start;
@@ -95,20 +96,6 @@
 
     &__content {
       width: 100%;
-
-      &__item:nth-child(2) {
-        transform: translateY(-1px);
-      }
-
-      &__item:nth-child(3) {
-        transform: translateY(-2px);
-      }
-      &__item:nth-child(4) {
-        transform: translateY(-3px);
-      }
-      &__item:nth-child(5) {
-        transform: translateY(-4px);
-      }
     }
 
     &__more {
@@ -117,7 +104,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      background-color: #efefef;
+      background-color: var(--color-gray-lighter);
       border-radius: var(--space-s);
       padding: var(--space-ml);
       padding-right: 96px;
@@ -135,7 +122,9 @@
         align-items: start;
         justify-content: start;
         gap: var(--space-m);
+        color: var(--color-gray-main);
         max-width: 533px;
+        line-height: 145%;
 
         &__button {
           width: fit-content;

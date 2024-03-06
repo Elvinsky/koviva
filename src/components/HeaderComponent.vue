@@ -115,8 +115,8 @@
     padding-right: calc(var(--space-default) + 2 * var(--space-safe));
     position: sticky;
     z-index: 10;
-    padding-top: var(--space-safe-top);
-    padding-bottom: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     background-color: var(--color-gray-lighter);
     width: 99vw;
     top: 0;
@@ -157,7 +157,7 @@
     gap: var(--space-s);
     padding-left: var(--space-safe);
     padding-right: var(--space-safe);
-    margin-top: -36px;
+    margin-top: -48px;
 
     &__item {
       width: fit-content;

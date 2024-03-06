@@ -75,7 +75,7 @@
 
 <style scoped lang="scss">
   .services {
-    padding-top: var(--space-l);
+    padding-top: 98px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -85,7 +85,7 @@
 
     &__header {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-xs);
+      padding-bottom: var(--space-s);
       display: flex;
       align-items: start;
       justify-content: start;

@@ -31,6 +31,7 @@
       align-items: start;
       justify-content: start;
       gap: var(--space-sm);
+      width: 280px;
     }
   }
 </style>
