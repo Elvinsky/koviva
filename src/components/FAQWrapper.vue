@@ -80,6 +80,7 @@
       align-items: start;
       color: var(--color-gray-main);
       justify-content: start;
+      max-width: 1000px;
 
       p {
         text-align: start;
