@@ -85,6 +85,7 @@
       display: flex;
       flex-direction: row;
       align-items: start;
+      padding-left: var(--space-ml);
       justify-content: start;
       gap: var(--space-2xl);
 
@@ -94,6 +95,7 @@
         align-items: start;
         justify-content: start;
         gap: var(--space-sm);
+        max-width: 420px;
       }
 
       &__form {
@@ -124,8 +126,13 @@
     background-color: transparent;
     padding: var(--space-s);
     font-size: var(--font-size-p1);
-    color: var(--color-gray-main);
+    color: var(--color-black-main);
     border-bottom: 1px solid var(--color-gray-main);
     width: 100%;
+
+    &:focus {
+      color: var(--color-blue-main);
+      border-bottom: 1px solid var(--color-blue-main);
+    }
   }
 </style>

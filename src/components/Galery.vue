@@ -3,32 +3,30 @@
     <div class="galery__header">
       <h2>{{ $t('galery.header') }}</h2>
     </div>
-    <div class="galery__slider">
-      <Carousel
-        :items-to-show="2"
-        mouse-drag
+  </div>
+  <div class="galery__slider">
+    <Carousel
+      wrapAround
+      :items-to-show="3"
+      mouse-drag
+    >
+      <Slide
+        v-for="slide in slides"
+        :key="slide.id"
       >
-        <Slide
-          v-for="slide in slides"
-          :key="slide.id"
-        >
+        <div class="country-slider__item">
           <img
             :src="slide.img"
             :alt="slide.alt"
           />
-        </Slide>
-
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
-      </Carousel>
-    </div>
+        </div>
+      </Slide>
+    </Carousel>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+  import { Carousel, Slide } from 'vue3-carousel';
 
   const slides = [
     {
@@ -66,7 +64,7 @@
 
 <style scoped lang="scss">
   .galery {
-    padding-top: var(--space-xl);
+    padding-top: var(--space-l);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -86,17 +84,44 @@
 
     &__slider {
       display: flex;
-      flex-direction: column;
-      width: 100%;
+      align-items: start;
+      justify-content: start;
+
+      &:hover {
+        cursor: grab;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-ml);
+      }
+
+      .carousel {
+        width: 99vw !important;
+
+        @include w-max(1920px) {
+          width: 1920px;
+        }
+      }
+
+      .carousel__slide {
+        width: 100%;
+        margin: 0px 20px;
+      }
     }
   }
 
-  .carousel {
-    width: 100% !important;
-    overflow: hidden !important;
-  }
-
-  .carousel__slide {
+  img {
     width: 100%;
+    @include w-max(1600px) {
+      width: 90%;
+    }
   }
 </style>

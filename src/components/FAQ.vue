@@ -19,36 +19,25 @@
         <p class="p2">
           {{ $t('faq.moreQuestionsContent') }}
         </p>
-        <BaseButton
-          class="faq__more__content__button"
-          variant="p1"
-        >
-          <div class="faq__more__content__button__content">
-            <p>{{ $t('buttons.textUs') }}</p>
-            <GreaterThenIcon
-              stroke-width="1.5px"
-              fill="#1444B4"
-            />
-          </div>
-        </BaseButton>
+        <BaseContactButton />
       </div>
     </div>
-    <div class="faq__content">
+    <!-- <div class="faq__content">
       <FAQWrapper
+        class="faq__content__item"
         v-for="faq in faqs"
         :key="faq.id"
       >
         <template #default>{{ $t(faq.header) }}</template>
         <template #content>{{ $t(faq.content) }}</template>
       </FAQWrapper>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup lang="ts">
-  import GreaterThenIcon from '@/assets/icons/Utility/GreaterThenIcon.vue';
   import FAQWrapper from './FAQWrapper.vue';
-  import BaseButton from './common/BaseButton.vue';
+  import BaseContactButton from './common/BaseContactButton.vue';
 
   const faqs = [
     {
@@ -86,10 +75,11 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: var(--space-ml);
+    gap: var(--space-m);
     width: 100%;
 
     h3 {
+      padding-top: 12px;
       padding-left: var(--space-ml);
     }
 
@@ -105,6 +95,20 @@
 
     &__content {
       width: 100%;
+
+      &__item:nth-child(2) {
+        transform: translateY(-1px);
+      }
+
+      &__item:nth-child(3) {
+        transform: translateY(-2px);
+      }
+      &__item:nth-child(4) {
+        transform: translateY(-3px);
+      }
+      &__item:nth-child(5) {
+        transform: translateY(-4px);
+      }
     }
 
     &__more {
@@ -116,6 +120,7 @@
       background-color: #efefef;
       border-radius: var(--space-s);
       padding: var(--space-ml);
+      padding-right: 96px;
       margin-top: var(--space-l);
       margin-bottom: var(--space-l);
 
@@ -130,7 +135,7 @@
         align-items: start;
         justify-content: start;
         gap: var(--space-m);
-        max-width: 450px;
+        max-width: 533px;
 
         &__button {
           width: fit-content;

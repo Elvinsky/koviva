@@ -1,89 +1,87 @@
 <template>
-  <div class="header__wrapper">
-    <header class="header">
-      <img
-        src="/logo.png"
-        alt="Logo"
-        class="header__logo"
-      />
-      <nav class="header__nav">
-        <a
-          @click.prevent="smoothScroll('about')"
-          href="#about"
-          class="p1"
-        >
-          {{ $t('nav.about') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('advantages')"
-          href="#advantages"
-          class="p1"
-        >
-          {{ $t('nav.advantages') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('services')"
-          href="#services"
-          class="p1"
-        >
-          {{ $t('nav.services') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('faq')"
-          href="#faq"
-          class="p1"
-        >
-          {{ $t('nav.faq') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('faq')"
-          href="#faq"
-          class="p1"
-        >
-          {{ $t('nav.certificates') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('galery')"
-          href="#galery"
-          class="p1"
-        >
-          {{ $t('nav.gallery') }}
-        </a>
-        <a
-          @click.prevent="smoothScroll('contacts')"
-          href="#contacts"
-          class="p1"
-        >
-          {{ $t('nav.contacts') }}
-        </a>
-      </nav>
-    </header>
-    <div class="i18n-buttons">
-      <BaseButton
-        variant="i18n"
-        class="i18n-buttons__item"
-        :selected="lang === 'en-US'"
-        @click="changeLang('en-US')"
+  <header class="header">
+    <img
+      src="/logo.png"
+      alt="Logo"
+      class="header__logo"
+    />
+    <nav class="header__nav">
+      <a
+        @click.prevent="smoothScroll('about')"
+        href="#about"
+        class="p1"
       >
-        EN
-      </BaseButton>
-      <BaseButton
-        variant="i18n"
-        class="i18n-buttons__item"
-        :selected="lang === 'ru-RU'"
-        @click="changeLang('ru-RU')"
+        {{ $t('nav.about') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('advantages')"
+        href="#advantages"
+        class="p1"
       >
-        RU
-      </BaseButton>
-      <BaseButton
-        variant="i18n"
-        class="i18n-buttons__item"
-        :selected="lang === 'pl-PL'"
-        @click="changeLang('pl-PL')"
+        {{ $t('nav.advantages') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('services')"
+        href="#services"
+        class="p1"
       >
-        PL
-      </BaseButton>
-    </div>
+        {{ $t('nav.services') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('faq')"
+        href="#faq"
+        class="p1"
+      >
+        {{ $t('nav.faq') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('faq')"
+        href="#faq"
+        class="p1"
+      >
+        {{ $t('nav.certificates') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('galery')"
+        href="#galery"
+        class="p1"
+      >
+        {{ $t('nav.gallery') }}
+      </a>
+      <a
+        @click.prevent="smoothScroll('contacts')"
+        href="#contacts"
+        class="p1"
+      >
+        {{ $t('nav.contacts') }}
+      </a>
+    </nav>
+  </header>
+  <div class="i18n-buttons">
+    <BaseButton
+      variant="i18n"
+      class="i18n-buttons__item"
+      :selected="lang === 'en-US'"
+      @click="changeLang('en-US')"
+    >
+      EN
+    </BaseButton>
+    <BaseButton
+      variant="i18n"
+      class="i18n-buttons__item"
+      :selected="lang === 'ru-RU'"
+      @click="changeLang('ru-RU')"
+    >
+      RU
+    </BaseButton>
+    <BaseButton
+      variant="i18n"
+      class="i18n-buttons__item"
+      :selected="lang === 'pl-PL'"
+      @click="changeLang('pl-PL')"
+    >
+      PL
+    </BaseButton>
   </div>
 </template>
 
@@ -107,58 +105,62 @@
 </script>
 
 <style scoped lang="scss">
-  .header__wrapper {
+  .header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: calc(var(--space-default) + 2 * var(--space-safe));
+    padding-right: calc(var(--space-default) + 2 * var(--space-safe));
+    position: sticky;
+    z-index: 10;
+    padding-top: var(--space-safe-top);
+    padding-bottom: 12px;
+    background-color: var(--color-gray-lighter);
+    width: 99vw;
     top: 0;
-    justify-content: center;
 
-    .header {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      align-items: center;
-      padding-bottom: var(--space-s);
-      justify-content: space-between;
-
-      &__logo {
-        width: 100px;
-        height: 36px;
-      }
-
-      &__nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-m);
-        transition: all 0.2s ease-in-out;
-
-        a:hover {
-          color: var(--color-black-main);
-        }
-
-        a:focus {
-          color: var(--color-blue-main);
-        }
-      }
+    &__logo {
+      width: 100px;
+      height: 36px;
     }
 
-    .i18n-buttons {
-      border-top: 1px solid var(--color-gray-light);
-      padding-top: var(--space-s);
+    &__nav {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: end;
-      width: 100%;
-      gap: var(--space-s);
+      justify-content: center;
+      gap: var(--space-m);
+      transition: all 0.2s ease-in-out;
 
-      &__item {
-        width: fit-content;
+      a:hover {
+        color: var(--color-black-main);
       }
+
+      a:active {
+        color: var(--color-blue-main);
+      }
+    }
+  }
+
+  .i18n-buttons {
+    border-top: 1px solid var(--color-gray-light);
+    padding-top: var(--space-s);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    gap: var(--space-s);
+    padding-left: var(--space-safe);
+    padding-right: var(--space-safe);
+    margin-top: -36px;
+
+    &__item {
+      width: fit-content;
     }
   }
 </style>

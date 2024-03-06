@@ -22,7 +22,13 @@
       <div class="contacts__content__item">
         <div class="contacts__content__item__text">
           <h4>{{ $t('contacts.adress') }}</h4>
-          <p class="p1">{{ $t('contacts.adressContent') }}</p>
+          <a
+            target="_blank"
+            class="p1"
+            href="https://maps.app.goo.gl/iR6P2ixNQxVYJUR78"
+          >
+            {{ $t('contacts.adressContent') }}
+          </a>
         </div>
         <MapIcon />
       </div>
@@ -74,6 +80,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
+      padding-right: var(--space-ml);
+      padding-left: var(--space-ml);
       gap: var(--space-s);
 
       &__item:first-child {

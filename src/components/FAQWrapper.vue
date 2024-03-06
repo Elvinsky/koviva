@@ -39,7 +39,7 @@
   import PlusIcon from '@/assets/icons/Utility/PlusIcon.vue';
   import { ref } from 'vue';
 
-  const closed = ref(false);
+  const closed = ref(true);
 
   defineProps({
     border: {
@@ -57,6 +57,7 @@
     align-items: start;
     justify-content: space-between;
     transition: max-height 0.3s ease-out;
+    border-collapse: collapse;
 
     &:hover {
       cursor: pointer;
@@ -83,13 +84,13 @@
     }
 
     &--border-both {
-      border-top: 1.5px solid var(--color-gray-light);
-      border-bottom: 1.5px solid var(--color-gray-light);
+      border-top: 1px solid var(--color-gray-light);
+      border-bottom: 1px solid var(--color-gray-light);
     }
 
     &--border-dark {
-      border-top: 1.5px solid var(--color-black-main);
-      border-bottom: 1.5px solid var(--color-black-main);
+      border-top: 1px solid var(--color-black-main);
+      border-bottom: 1px solid var(--color-black-main);
     }
 
     &__content {

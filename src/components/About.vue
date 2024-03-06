@@ -42,18 +42,16 @@
       flex-direction: row;
       align-items: start;
       justify-content: space-between;
-      gap: var(--space-xl);
+      gap: var(--space-l);
       padding-left: var(--space-ml);
       width: 100%;
 
       p {
         line-height: 145%;
-        width: 50%;
+        max-width: 580px;
       }
 
       h3 {
-        width: 40%;
-
         span {
           color: var(--color-blue-main);
         }

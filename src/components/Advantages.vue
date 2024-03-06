@@ -7,19 +7,19 @@
       <h3>{{ $t('advantages.advantagesHeaderSecond') }}</h3>
       <div class="advantages__content__circled-text">
         <div class="advantages__content__circled-text__item">
-          <h2>{{ $t('advantages.circlesText.text1') }}</h2>
+          <h4>{{ $t('advantages.circlesText.text1') }}</h4>
         </div>
         <div class="advantages__content__circled-text__item">
-          <h2>{{ $t('advantages.circlesText.text2') }}</h2>
+          <h4>{{ $t('advantages.circlesText.text2') }}</h4>
         </div>
         <div class="advantages__content__circled-text__item">
-          <h2>{{ $t('advantages.circlesText.text3') }}</h2>
+          <h4>{{ $t('advantages.circlesText.text3') }}</h4>
         </div>
         <div class="advantages__content__circled-text__item">
-          <h2>{{ $t('advantages.circlesText.text4') }}</h2>
+          <h4>{{ $t('advantages.circlesText.text4') }}</h4>
         </div>
         <div class="advantages__content__circled-text__item">
-          <h2>{{ $t('advantages.circlesText.text5') }}</h2>
+          <h4>{{ $t('advantages.circlesText.text5') }}</h4>
         </div>
       </div>
       <div class="advantages__content__info">
@@ -113,14 +113,14 @@
           justify-content: center;
           color: var(--color-blue-main);
           border: 2px solid var(--color-blue-main);
-          width: 240px;
-          height: 240px;
+          width: 230px;
+          height: 230px;
           border-radius: 50%;
           background-color: var(--color-white-main);
 
           @include w-max(1600px) {
-            width: 220px;
-            height: 220px;
+            width: 280px;
+            height: 280px;
           }
 
           &:nth-child(2) {
@@ -136,7 +136,7 @@
             transform: translateX(calc(-4 * var(--space-m)));
           }
 
-          h2 {
+          h4 {
             max-width: 100px;
             text-align: center;
           }
@@ -158,6 +158,10 @@
           justify-content: start;
           gap: var(--space-sm);
           max-width: 450px;
+
+          span {
+            color: var(--color-blue-main);
+          }
 
           p {
             color: var(--color-gray-main);

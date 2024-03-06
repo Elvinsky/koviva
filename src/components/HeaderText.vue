@@ -1,18 +1,7 @@
 <template>
   <div class="header-text">
     <h1>{{ $t('general.mainHeader') }}</h1>
-    <BaseButton
-      class="header-text__button"
-      variant="p1"
-    >
-      <div class="header-text__button__content">
-        <p>{{ $t('buttons.textUs') }}</p>
-        <GreaterThenIcon
-          stroke-width="1.5px"
-          fill="#1444B4"
-        />
-      </div>
-    </BaseButton>
+    <BaseContactButton />
     <img
       src="/tanker_truck.png"
       alt="koviva-truck"
@@ -23,6 +12,7 @@
 <script setup>
   import GreaterThenIcon from '@/assets/icons/Utility/GreaterThenIcon.vue';
   import BaseButton from './common/BaseButton.vue';
+  import BaseContactButton from './common/BaseContactButton.vue';
 </script>
 
 <style scoped lang="scss">
@@ -34,30 +24,26 @@
     gap: var(--space-sm);
     width: 100%;
 
-    img {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 1055px;
+      background-color: var(--color-gray-lighter);
     }
 
-    &__button {
-      width: fit-content;
-
-      &:hover {
-        ::v-deep(path) {
-          stroke: var(--color-white-main);
-        }
-      }
-
-      &__content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-s);
-
-        p {
-          line-height: 120%;
-        }
-      }
+    h1 {
+      max-width: 1030px;
+      position: relative;
+      z-index: 2;
+    }
+    img {
+      width: 100%;
+      position: relative;
+      z-index: 2;
     }
   }
 </style>

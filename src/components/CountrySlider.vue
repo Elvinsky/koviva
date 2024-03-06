@@ -1,7 +1,8 @@
 <template>
   <div class="country-slider">
     <Carousel
-      :items-to-show="3"
+      wrapAround
+      :items-to-show="5"
       mouse-drag
     >
       <Slide
@@ -13,18 +14,13 @@
           <p class="p1">{{ $t(`countries.${slide.caption}`) }}</p>
         </div>
       </Slide>
-
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
     </Carousel>
   </div>
 </template>
 
 <script setup lang="ts">
   import Switzerland from '../assets/icons/Countries/Switzerland.vue';
-  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+  import { Carousel, Slide } from 'vue3-carousel';
   import Poland from '../assets/icons/Countries/Poland.vue';
   import Germany from '../assets/icons/Countries/Germany.vue';
   import Italy from '../assets/icons/Countries/Italy.vue';
@@ -152,11 +148,14 @@
 
 <style scoped lang="scss">
   .country-slider {
-    padding-top: var(--space-m);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding-top: var(--space-l);
+    &:hover {
+      cursor: grab;
+    }
 
+    &:active {
+      cursor: grabbing;
+    }
     &__item {
       display: flex;
       flex-direction: column;
@@ -166,8 +165,11 @@
     }
   }
   .carousel {
-    width: 100% !important;
-    overflow: hidden !important;
+    width: 99vw !important;
+
+    @include w-max(1920px) {
+      width: 1920px;
+    }
   }
 
   .carousel__slide {

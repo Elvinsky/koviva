@@ -15,7 +15,7 @@
         :key="service.id"
       >
         <template #content>
-          {{ $t(service.contentCode) }}
+          <h4>{{ $t(service.contentCode) }}</h4>
         </template>
         <template #icon> <component :is="service.icon"> </component></template>
       </ServiceItem>
@@ -75,7 +75,7 @@
 
 <style scoped lang="scss">
   .services {
-    padding-top: var(--space-xl);
+    padding-top: var(--space-l);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -104,7 +104,8 @@
 
       p {
         line-height: 145%;
-        width: 50%;
+        max-width: 480px;
+        color: var(--color-gray-main);
       }
 
       h3 {
@@ -122,6 +123,10 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: var(--space-s);
+
+      h4 {
+        line-height: 130%;
+      }
     }
   }
 </style>

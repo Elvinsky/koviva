@@ -41,12 +41,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: var(--space-default);
-    padding-right: var(--space-default);
-    padding-top: var(--space-safe-top);
-    padding-bottom: var(--space-m);
+    padding-left: calc(var(--space-default) + var(--space-safe));
+    padding-right: calc(var(--space-default) + var(--space-safe));
     width: 100%;
-    background-color: var(--color-gray-lighter);
+    background-color: var(--color-white-main);
     gap: var(--space-l);
 
     @include w-max(1600px) {
