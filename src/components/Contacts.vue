@@ -17,7 +17,7 @@
             +48 514-604-122
           </a>
         </div>
-        <PhoneIcon />
+        <PhoneIcon class="contacts__content__item__icon" />
       </div>
       <div class="contacts__content__item">
         <div class="contacts__content__item__text">
@@ -30,7 +30,7 @@
             {{ $t('contacts.adressContent') }}
           </a>
         </div>
-        <MapIcon />
+        <MapIcon class="contacts__content__item__icon" />
       </div>
       <div class="contacts__content__item">
         <div class="contacts__content__item__text">
@@ -42,7 +42,7 @@
             koviva.sp@gmail.com
           </a>
         </div>
-        <EmailIcon />
+        <EmailIcon class="contacts__content__item__icon" />
       </div>
     </div>
   </div>
@@ -113,6 +113,10 @@
           p {
             color: var(--color-blue-main);
           }
+        }
+
+        &__icon {
+          margin-top: -10px;
         }
       }
     }

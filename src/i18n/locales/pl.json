@@ -104,7 +104,7 @@
     "header":"Galeria"
   },
   "contactus":{
-    "header":"Bądźmy w kontakcie",
+    "header":"Bądźmy w kontakcie!",
     "subheader":"Formularz zgłoszeniowy",
     "content":"Tutaj możesz zostawić swoje dane kontaktowe oraz zadać dowolne pytanie lub złożyć wniosek o wykonanie przewozu towarowego",
     "name":"Imię",
@@ -117,7 +117,7 @@
   "contacts":{
     "header":"Kontakt",
     "subheader":"Koviva - profesjonalizm i niezawodność w każdym zamówieniu!",
-    "tel":"Numery telefonów:",
+    "tel":"Numer telefonu:",
     "adress":"Addres:",
     "adressContent":"Chełmżynska 180A, 04-464, Warszawa, Polska",
     "email":"Email:"

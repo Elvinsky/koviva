@@ -5,7 +5,7 @@
       :items-to-show="5"
       mouse-drag
       :autoplay="900"
-      :transition="1000"
+      :transition="2000"
     >
       <Slide
         v-for="slide in slides"

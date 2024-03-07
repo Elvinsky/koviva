@@ -104,8 +104,9 @@
       &__circled-text {
         display: flex;
         align-items: start;
+        margin-left: -50px;
         justify-content: start;
-        width: 100%;
+        width: 120%;
 
         &__item {
           display: flex;
@@ -113,15 +114,10 @@
           justify-content: center;
           color: var(--color-blue-main);
           border: 2px solid var(--color-blue-main);
-          width: 230px;
-          height: 230px;
+          width: 240px;
+          height: 240px;
           border-radius: 50%;
           background-color: var(--color-white-main);
-
-          @include w-max(1600px) {
-            width: 280px;
-            height: 280px;
-          }
 
           &:nth-child(2) {
             transform: translateX(calc(-1 * var(--space-m)));
@@ -137,7 +133,7 @@
           }
 
           h4 {
-            max-width: 100px;
+            max-width: 200px;
             text-align: center;
           }
         }

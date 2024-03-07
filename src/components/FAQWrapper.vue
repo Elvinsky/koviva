@@ -4,20 +4,25 @@
     @click="closed = !closed"
     :class="{
       'faq-wrapper--border-bottom-thick': thicken === 'bottom',
+      'faq-wrapper--border-top-thick': thicken === 'top',
       'faq-wrapper--border-both': border === 'both',
       'faq-wrapper--border-dark': !closed,
     }"
   >
-    <div class="faq-wrapper__activator">
+    <div
+      class="faq-wrapper__activator"
+      @mouseover="changeFill('#1444B4')"
+      @mouseout="changeFill('black')"
+    >
       <p class="p2">
         <slot></slot>
       </p>
       <PlusIcon
-        fill="black"
+        :fill="iconFill"
         v-if="closed"
       />
       <MinusIcon
-        fill="black"
+        :fill="iconFill"
         v-else
       />
     </div>
@@ -48,6 +53,12 @@
       default: 'both',
     },
   });
+
+  const iconFill = ref('black');
+
+  const changeFill = color => {
+    iconFill.value = color;
+  };
 </script>
 
 <style scoped lang="scss">
@@ -61,6 +72,29 @@
     border-collapse: collapse;
 
     &:hover {
+      ::v-deep(path) {
+        fill: var(--color-blue-main);
+      }
+      .faq-wrapper__activator {
+        color: var(--color-blue-main);
+      }
+    }
+
+    &--border-thicken-top {
+      border-top: 2px solid var(--color-gray-light);
+    }
+    &--border-thicken-top.faq-wrapper--border-dark {
+      border-top: 2px solid var(--color-black-main);
+    }
+
+    &--border-thicken-bottom {
+      border-bottom: 2px solid var(--color-gray-light);
+    }
+    &--border-thicken-top.faq-wrapper--border-dark {
+      border-bottom: 2px solid var(--color-black-main);
+    }
+
+    &:hover {
       cursor: pointer;
     }
 
@@ -72,6 +106,7 @@
       align-items: center;
       color: var(--color-gray-main);
       justify-content: space-between;
+      transition: all 0.3s ease;
     }
 
     &__content {
@@ -83,6 +118,7 @@
       max-width: 1000px;
 
       p {
+        line-height: 145%;
         text-align: start;
       }
     }

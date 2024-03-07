@@ -1,5 +1,8 @@
 <template>
-  <div class="galery">
+  <div
+    class="galery"
+    id="galery"
+  >
     <div class="galery__header">
       <h2>{{ $t('galery.header') }}</h2>
     </div>
@@ -122,8 +125,8 @@
   }
 
   img {
-    width: 100%;
-    @include w-max(1600px) {
+    width: 120%;
+    @include w-max(1800) {
       width: 90%;
     }
   }

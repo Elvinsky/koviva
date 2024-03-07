@@ -7,7 +7,7 @@
     <div class="faq__content">
       <FAQWrapper
         class="faq__content__item"
-        v-for="faq in faqs"
+        v-for="(faq, idx) in faqs"
         :key="faq.id"
       >
         <template #default>{{ $t(faq.header) }}</template>
@@ -121,7 +121,7 @@
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        gap: var(--space-m);
+        gap: var(--space-sm);
         color: var(--color-gray-main);
         max-width: 533px;
         line-height: 145%;
