@@ -114,6 +114,7 @@
     background-color: var(--color-gray-lighter);
     width: 99vw;
     top: 0;
+    gap: 40px;
 
     &__logo {
       width: 100px;
@@ -134,6 +135,10 @@
 
       a:active {
         color: var(--color-blue-main);
+      }
+
+      a {
+        white-space: nowrap;
       }
     }
   }

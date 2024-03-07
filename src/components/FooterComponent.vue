@@ -36,13 +36,6 @@
           {{ $t('nav.faq') }}
         </a>
         <a
-          @click.prevent="smoothScroll('faq')"
-          href="#faq"
-          class="p1"
-        >
-          {{ $t('nav.certificates') }}
-        </a>
-        <a
           @click.prevent="smoothScroll('galery')"
           href="#galery"
           class="p1"

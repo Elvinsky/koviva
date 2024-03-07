@@ -99,7 +99,7 @@
     }
 
     &__activator {
-      padding: var(--space-m) var(--space-ml);
+      padding: var(--space-sm) var(--space-ml);
       display: flex;
       flex-direction: row;
       width: 100%;
@@ -144,9 +144,9 @@
 
     &__content {
       padding-left: var(--space-ml);
-      padding-bottom: var(--space-ml);
+      padding-bottom: var(--space-m);
       padding-right: var(--space-ml);
-      padding-top: var(--space-m);
+      padding-top: var(--space-s);
     }
   }
 

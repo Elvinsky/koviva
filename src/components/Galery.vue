@@ -125,9 +125,6 @@
   }
 
   img {
-    width: 120%;
-    @include w-max(1800) {
-      width: 90%;
-    }
+    width: 33vw;
   }
 </style>

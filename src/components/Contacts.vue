@@ -112,6 +112,7 @@
           a,
           p {
             color: var(--color-blue-main);
+            line-height: 145%;
           }
         }
 
