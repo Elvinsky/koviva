@@ -49,6 +49,32 @@
         >
           {{ $t('nav.contacts') }}
         </a>
+        <div class="footer__nav__i18n-buttons">
+          <BaseButton
+            variant="i18n"
+            class="i18n-buttons__item"
+            :selected="lang === 'en-US'"
+            @click="changeLang('en-US')"
+          >
+            EN
+          </BaseButton>
+          <BaseButton
+            variant="i18n"
+            class="i18n-buttons__item"
+            :selected="lang === 'ru-RU'"
+            @click="changeLang('ru-RU')"
+          >
+            RU
+          </BaseButton>
+          <BaseButton
+            variant="i18n"
+            class="i18n-buttons__item"
+            :selected="lang === 'pl-PL'"
+            @click="changeLang('pl-PL')"
+          >
+            PL
+          </BaseButton>
+        </div>
       </nav>
     </footer>
     <div class="i18n-buttons">
@@ -114,6 +140,11 @@
     padding: var(--space-m) calc(var(--space-default) + var(--space-safe));
     background-color: var(--color-gray-lighter);
 
+    @include w-max($sm) {
+      margin-top: 0;
+      padding: 12px 24px;
+    }
+
     .footer {
       display: flex;
       flex-direction: row;
@@ -135,6 +166,20 @@
         gap: var(--space-m);
         transition: all 0.2s ease-in-out;
 
+        a {
+          @include w-max($sm) {
+            display: none;
+          }
+        }
+
+        &__i18n-buttons {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          align-items: center;
+          justify-content: center;
+        }
+
         a:hover {
           color: var(--color-black-main);
         }
@@ -152,6 +197,10 @@
       justify-content: end;
       width: 100%;
       gap: var(--space-s);
+
+      @include w-max($sm) {
+        display: none;
+      }
 
       &__item {
         width: fit-content;

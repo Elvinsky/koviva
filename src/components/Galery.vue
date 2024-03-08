@@ -28,6 +28,27 @@
       </Slide>
     </Carousel>
   </div>
+  <div class="galery__slider--mobile">
+    <Carousel
+      wrapAround
+      :items-to-show="2"
+      mouse-drag
+      :autoplay="900"
+      :transition="1000"
+    >
+      <Slide
+        v-for="slide in slides"
+        :key="slide.id"
+      >
+        <div class="country-slider__item">
+          <img
+            :src="slide.img"
+            :alt="slide.alt"
+          />
+        </div>
+      </Slide>
+    </Carousel>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -85,6 +106,12 @@
       justify-content: start;
       border-bottom: 1px solid var(--color-gray-light);
       width: 100%;
+
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
     }
 
     &__slider {
@@ -92,6 +119,10 @@
       align-items: start;
       justify-content: start;
       margin-top: -12px;
+
+      @include w-max($sm) {
+        display: none;
+      }
 
       &:hover {
         cursor: grab;
@@ -108,23 +139,30 @@
         justify-content: center;
         gap: var(--space-ml);
       }
+      &--mobile {
+        display: none;
 
-      .carousel {
-        width: 99vw !important;
-
-        @include w-max(1920px) {
-          width: 1920px;
+        @include w-max($sm) {
+          display: flex;
+          margin-top: -24px;
         }
-      }
-
-      .carousel__slide {
-        width: 100%;
-        margin: 0px 20px;
       }
     }
   }
 
   img {
     width: 33vw;
+
+    @include w-max($sm) {
+      width: 100%;
+    }
+  }
+  .carousel {
+    width: 99vw !important;
+  }
+
+  .carousel__slide {
+    width: 100%;
+    margin: 0px 20px;
   }
 </style>

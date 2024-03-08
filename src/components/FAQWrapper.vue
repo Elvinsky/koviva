@@ -107,6 +107,16 @@
       color: var(--color-gray-main);
       justify-content: space-between;
       transition: all 0.3s ease;
+
+      @include w-max($sm) {
+        padding: var(--space-sm) var(--space-xs);
+
+        p {
+          width: 280px;
+          line-height: 145%;
+          font-size: 18px;
+        }
+      }
     }
 
     &__content {
@@ -147,6 +157,16 @@
       padding-bottom: var(--space-m);
       padding-right: var(--space-ml);
       padding-top: var(--space-s);
+
+      @include w-max($sm) {
+        padding: var(--space-sm) var(--space-xs);
+
+        p {
+          width: 350px;
+          line-height: 145%;
+          font-size: 18px;
+        }
+      }
     }
   }
 

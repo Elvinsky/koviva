@@ -79,6 +79,12 @@
       justify-content: start;
       border-bottom: 1px solid var(--color-gray-light);
       width: 100%;
+
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
     }
 
     &__content {
@@ -88,6 +94,12 @@
       padding-left: var(--space-ml);
       justify-content: start;
       gap: var(--space-2xl);
+
+      @include w-max($sm) {
+        flex-direction: column;
+        gap: 48px;
+        padding-left: var(--space-xs);
+      }
 
       &__text {
         display: flex;
@@ -105,14 +117,29 @@
         width: 100%;
         gap: var(--space-m);
 
+        @include w-max($sm) {
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr;
+        }
+
         &__input--msg {
           grid-column-start: 1;
           grid-column-end: 3;
+
+          @include w-max($sm) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+          }
         }
 
         &__submit {
           grid-column-start: 1;
           grid-column-end: 3;
+
+          @include w-max($sm) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+          }
         }
       }
     }

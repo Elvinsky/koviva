@@ -18,6 +18,25 @@
       </Slide>
     </Carousel>
   </div>
+  <div class="country-slider--mobile">
+    <Carousel
+      wrapAround
+      :items-to-show="1.4"
+      mouse-drag
+      :autoplay="900"
+      :transition="2000"
+    >
+      <Slide
+        v-for="slide in slides"
+        :key="slide.id"
+      >
+        <div class="country-slider__item">
+          <component :is="slide.component" />
+          <p class="p1">{{ $t(`countries.${slide.caption}`) }}</p>
+        </div>
+      </Slide>
+    </Carousel>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -151,6 +170,11 @@
 <style scoped lang="scss">
   .country-slider {
     padding-top: var(--space-l);
+
+    @include w-max($sm) {
+      display: none;
+    }
+
     &:hover {
       cursor: grab;
     }
@@ -158,6 +182,7 @@
     &:active {
       cursor: grabbing;
     }
+
     &__item {
       display: flex;
       flex-direction: column;
@@ -165,7 +190,35 @@
       justify-content: center;
       gap: var(--space-ml);
     }
+
+    @include w-max($sm) {
+      display: none;
+    }
   }
+
+  .country-slider--mobile {
+    display: none;
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-ml);
+    }
+
+    @include w-max($sm) {
+      display: flex;
+    }
+  }
+
   .carousel {
     width: 99vw !important;
 

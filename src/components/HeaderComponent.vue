@@ -49,6 +49,11 @@
       >
         {{ $t('nav.contacts') }}
       </a>
+      <BurgerIcon
+        class="icon"
+        @click="toggleBurger"
+        v-if="!isMenuOpened"
+      />
     </nav>
   </header>
   <div class="i18n-buttons">
@@ -77,15 +82,86 @@
       PL
     </BaseButton>
   </div>
+
+  <div
+    class="burger-menu"
+    v-if="isMenuOpened"
+  >
+    <CloseBurgerIcon
+      class="icon"
+      @click="toggleBurger"
+      v-if="isMenuOpened"
+    />
+    <nav>
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('about', true)"
+          href="#about"
+          class="p1"
+        >
+          {{ $t('nav.about') }}
+        </a>
+      </div>
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('advantages', true)"
+          href="#advantages"
+          class="p1"
+        >
+          {{ $t('nav.advantages') }}
+        </a>
+      </div>
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('services', true)"
+          href="#services"
+          class="p1"
+        >
+          {{ $t('nav.services') }}
+        </a>
+      </div>
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('faq', true)"
+          href="#faq"
+          class="p1"
+        >
+          {{ $t('nav.faq') }}
+        </a>
+      </div>
+
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('galery', true)"
+          href="#galery"
+          class="p1"
+        >
+          {{ $t('nav.gallery') }}
+        </a>
+      </div>
+      <div class="nav__item">
+        <a
+          @click.prevent="smoothScroll('contacts', true)"
+          href="#contacts"
+          class="p1"
+        >
+          {{ $t('nav.contacts') }}
+        </a>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script setup>
+  import BurgerIcon from '@/assets/icons/Mobile/BurgerIcon.vue';
   import BaseButton from '../components/common/BaseButton.vue';
   import { useLanguage } from '../composables/useLaguage';
+  import { ref } from 'vue';
+  import CloseBurgerIcon from '@/assets/icons/Mobile/CloseBurgerIcon.vue';
 
   const { lang, changeLang } = useLanguage();
 
-  const smoothScroll = targetId => {
+  const smoothScroll = (targetId, fromBurger) => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       const offsetTop = targetElement.offsetTop;
@@ -95,6 +171,20 @@
         behavior: 'smooth',
       });
     }
+
+    if (fromBurger) {
+      toggleBurger();
+    }
+  };
+
+  const isMenuOpened = ref(false);
+  const toggleBurger = () => {
+    isMenuOpened.value = !isMenuOpened.value;
+    if (isMenuOpened.value) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   };
 </script>
 
@@ -102,7 +192,6 @@
   .header {
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding-left: calc(var(--space-default) + 2 * var(--space-safe));
@@ -115,6 +204,15 @@
     width: 99vw;
     top: 0;
     gap: 40px;
+
+    @include w-max($sm) {
+      position: fixed;
+      top: 0;
+      background-color: var(--color-gray-lighter);
+      width: 100%;
+      justify-content: space-between;
+      padding: 16px 24px;
+    }
 
     &__logo {
       width: 100px;
@@ -139,6 +237,19 @@
 
       a {
         white-space: nowrap;
+
+        @include w-max($sm) {
+          display: none;
+        }
+      }
+
+      .icon {
+        display: none;
+
+        @include w-max($sm) {
+          display: block;
+          transition: all 0.3s ease;
+        }
       }
     }
   }
@@ -160,6 +271,53 @@
 
     &__item {
       width: fit-content;
+    }
+  }
+
+  .burger-menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    padding: 75px 16px;
+    background-color: var(--color-white-main);
+
+    .icon {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 20px;
+      width: 100%;
+
+      .nav__item {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        border-bottom: 1px solid var(--color-gray-light);
+        width: 100%;
+      }
+
+      a {
+        font-size: 24px;
+        line-height: 130%;
+        padding-bottom: 20px;
+        color: var(--color-gray-main);
+      }
     }
   }
 </style>

@@ -175,5 +175,118 @@
         }
       }
     }
+
+    @include w-max($sm) {
+      padding-top: var(--space-m);
+      gap: var(--space-m);
+
+      &__header {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
+
+      &__content {
+        padding-left: var(--space-xs);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-l);
+        width: 100%;
+
+        h3 {
+          max-width: 210px;
+          font-size: 24px;
+          line-height: 130%;
+          align-self: flex-start;
+        }
+
+        &__circled-text {
+          display: none;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+
+          &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-blue-main);
+            border: 2px solid var(--color-blue-main);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--color-white-main);
+
+            &:nth-child(2) {
+              transform: translateX(0);
+            }
+            &:nth-child(3) {
+              transform: translateX(0);
+            }
+            &:nth-child(4) {
+              transform: translateX(0);
+            }
+            &:nth-child(5) {
+              transform: translateX(0);
+            }
+
+            h4 {
+              max-width: 200px;
+              text-align: center;
+              font-size: 18px;
+              line-height: 145%;
+            }
+          }
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+          width: 100%;
+          gap: var(--space-ml);
+
+          &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: var(--space-sm);
+            max-width: 450px;
+
+            span {
+              color: var(--color-blue-main);
+              line-height: 130%;
+              font-size: 24px;
+            }
+
+            p {
+              color: var(--color-gray-main);
+              line-height: 145%;
+              font-size: 18px;
+            }
+
+            h4 {
+              color: var(--color-black-main);
+              line-height: 130%;
+              font-size: 24px;
+            }
+          }
+
+          &__line {
+            padding-top: var(--space-m);
+            border-top: 1px solid var(--color-gray-light);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: var(--space-m);
+          }
+        }
+      }
+    }
   }
 </style>

@@ -91,6 +91,16 @@
       justify-content: start;
       border-bottom: 1px solid var(--color-gray-light);
       width: 100%;
+
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
+    }
+
+    @include w-max($sm) {
+      padding-top: 24px;
     }
 
     &__info {
@@ -110,9 +120,26 @@
 
       h3 {
         width: 40%;
+      }
 
-        span {
-          color: var(--color-blue-main);
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+
+        gap: var(--space-sm);
+        flex-direction: column;
+        gap: 32px;
+
+        h3 {
+          font-size: 24px;
+          line-height: 130%;
+          color: var(--color-black-main);
+          width: 280px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 145%;
+          color: var(--color-gray-main);
         }
       }
     }
@@ -126,6 +153,16 @@
 
       h4 {
         line-height: 130%;
+      }
+
+      @include w-max($sm) {
+        grid-template-columns: 1fr;
+
+        h4 {
+          font-size: 18px;
+          color: var(--color-black-main);
+          max-width: 200px;
+        }
       }
     }
   }

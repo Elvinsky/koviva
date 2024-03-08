@@ -35,6 +35,12 @@
       justify-content: start;
       border-bottom: 1px solid var(--color-gray-light);
       width: 100%;
+
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
     }
 
     &__content {
@@ -54,6 +60,26 @@
       h3 {
         span {
           color: var(--color-blue-main);
+        }
+      }
+
+      @include w-max($sm) {
+        flex-direction: column;
+        gap: 24px;
+        padding-left: var(--space-xs);
+
+        h3 {
+          font-size: 24px;
+          line-height: 130%;
+          span {
+            color: var(--color-blue-main);
+          }
+        }
+
+        p {
+          line-height: 145%;
+          max-width: 370px;
+          font-size: 18px;
         }
       }
     }

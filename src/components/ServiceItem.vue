@@ -33,5 +33,14 @@
       gap: var(--space-sm);
       width: 280px;
     }
+
+    @include w-max($sm) {
+      padding: var(--space-m);
+      gap: 0;
+
+      &__content {
+        width: fit-content;
+      }
+    }
   }
 </style>

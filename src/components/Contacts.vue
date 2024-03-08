@@ -66,6 +66,10 @@
     gap: var(--space-l);
     width: 100%;
 
+    @include w-max($sm) {
+      padding-top: var(--space-l);
+    }
+
     &__header {
       padding-left: var(--space-ml);
       padding-bottom: var(--space-s);
@@ -74,6 +78,12 @@
       justify-content: start;
       border-bottom: 1px solid var(--color-gray-light);
       width: 100%;
+
+      @include w-max($sm) {
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-s);
+        color: var(--color-black-main);
+      }
     }
 
     &__content {
@@ -84,10 +94,21 @@
       padding-left: var(--space-ml);
       gap: var(--space-s);
 
+      @include w-max($sm) {
+        grid-template-columns: 1fr;
+        padding-left: var(--space-xs);
+        padding-right: var(--space-xs);
+      }
+
       &__item:first-child {
         display: flex;
         align-items: start;
         justify-content: start;
+
+        @include w-max($sm) {
+          font-size: 24px;
+          line-height: 130%;
+        }
       }
 
       &__item:not(:first-child) {
@@ -109,10 +130,24 @@
           justify-content: center;
           gap: var(--space-sm);
 
+          @include w-max($sm) {
+            max-width: 220px;
+          }
+
           a,
           p {
             color: var(--color-blue-main);
             line-height: 145%;
+
+            @include w-max($sm) {
+              font-size: 18px;
+            }
+          }
+
+          h4 {
+            @include w-max($sm) {
+              font-size: 20px;
+            }
           }
         }
 

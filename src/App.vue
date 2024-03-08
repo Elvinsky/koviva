@@ -46,6 +46,7 @@
     width: 100%;
     background-color: var(--color-white-main);
     gap: var(--space-l);
+    overflow: hidden;
 
     @include w-max(1600px) {
       padding: var(--space-safe-top) 200px;
@@ -54,6 +55,10 @@
     @include w-max($xl) {
       padding-left: var(--space-safe-top);
       padding-right: var(--space-safe-top);
+    }
+
+    @include w-max($sm) {
+      padding: 16px;
     }
 
     &__country-slider {
