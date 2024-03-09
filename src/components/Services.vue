@@ -116,10 +116,17 @@
         line-height: 145%;
         max-width: 480px;
         color: var(--color-gray-main);
+
+        @include w-max($lg) {
+          max-width: 300px;
+        }
       }
 
       h3 {
         width: 40%;
+        @include w-max($lg) {
+          width: 400px;
+        }
       }
 
       @include w-max($sm) {
@@ -158,6 +165,14 @@
       @include w-max($sm) {
         grid-template-columns: 1fr;
 
+        h4 {
+          font-size: 18px;
+          color: var(--color-black-main);
+          max-width: 200px;
+        }
+      }
+
+      @include w-max($lg) {
         h4 {
           font-size: 18px;
           color: var(--color-black-main);

@@ -205,6 +205,15 @@
     top: 0;
     gap: 40px;
 
+    @include w-max($lg) {
+      position: fixed;
+      top: 0;
+      background-color: var(--color-gray-lighter);
+      width: 100%;
+      justify-content: space-between;
+      padding: 16px 32px;
+    }
+
     @include w-max($sm) {
       position: fixed;
       top: 0;
@@ -238,7 +247,7 @@
       a {
         white-space: nowrap;
 
-        @include w-max($sm) {
+        @include w-max($lg) {
           display: none;
         }
       }
@@ -246,7 +255,7 @@
       .icon {
         display: none;
 
-        @include w-max($sm) {
+        @include w-max($lg) {
           display: block;
           transition: all 0.3s ease;
         }
@@ -271,6 +280,11 @@
 
     &__item {
       width: fit-content;
+    }
+
+    @include w-max($lg) {
+      margin-top: 36px;
+      padding-right: 8px;
     }
   }
 

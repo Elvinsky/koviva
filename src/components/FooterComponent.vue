@@ -140,9 +140,9 @@
     padding: var(--space-m) calc(var(--space-default) + var(--space-safe));
     background-color: var(--color-gray-lighter);
 
-    @include w-max($sm) {
+    @include w-max($lg) {
       margin-top: 0;
-      padding: 12px 24px;
+      padding: 10px 24px;
     }
 
     .footer {
@@ -173,11 +173,16 @@
         }
 
         &__i18n-buttons {
-          display: flex;
+          display: none;
+
           flex-direction: row;
           gap: 16px;
           align-items: center;
           justify-content: center;
+
+          @include w-max($sm) {
+            display: flex;
+          }
         }
 
         a:hover {

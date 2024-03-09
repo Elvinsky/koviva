@@ -118,7 +118,10 @@
           height: 240px;
           border-radius: 50%;
           background-color: var(--color-white-main);
-
+          @include w-max($lg) {
+            width: 200px;
+            height: 200px;
+          }
           &:nth-child(2) {
             transform: translateX(calc(-1 * var(--space-m)));
           }
@@ -154,6 +157,10 @@
           justify-content: start;
           gap: var(--space-sm);
           max-width: 450px;
+
+          @include w-max($lg) {
+            max-width: 300px;
+          }
 
           span {
             color: var(--color-blue-main);

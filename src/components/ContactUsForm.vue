@@ -108,6 +108,10 @@
         justify-content: start;
         gap: var(--space-sm);
         max-width: 420px;
+
+        @include w-max($lg) {
+          max-width: 320px;
+        }
       }
 
       &__form {

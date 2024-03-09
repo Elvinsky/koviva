@@ -37,6 +37,25 @@
       </Slide>
     </Carousel>
   </div>
+  <div class="country-slider--tablet">
+    <Carousel
+      wrapAround
+      :items-to-show="3"
+      mouse-drag
+      :autoplay="900"
+      :transition="2000"
+    >
+      <Slide
+        v-for="slide in slides"
+        :key="slide.id"
+      >
+        <div class="country-slider__item">
+          <component :is="slide.component" />
+          <p class="p1">{{ $t(`countries.${slide.caption}`) }}</p>
+        </div>
+      </Slide>
+    </Carousel>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -171,7 +190,7 @@
   .country-slider {
     padding-top: var(--space-l);
 
-    @include w-max($sm) {
+    @include w-max($lg) {
       display: none;
     }
 
@@ -216,6 +235,33 @@
 
     @include w-max($sm) {
       display: flex;
+    }
+  }
+
+  .country-slider--tablet {
+    display: none;
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-ml);
+    }
+
+    @include w-max($lg) {
+      display: flex;
+    }
+
+    @include w-max($sm) {
+      display: none;
     }
   }
 

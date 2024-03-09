@@ -25,6 +25,10 @@
     gap: var(--space-xl);
     border-radius: var(--space-s);
 
+    @include w-max($lg) {
+      gap: 10px;
+    }
+
     &__content {
       display: flex;
       flex-direction: column;

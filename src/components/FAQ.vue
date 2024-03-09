@@ -127,6 +127,10 @@
       margin-top: var(--space-l);
       margin-bottom: var(--space-l);
 
+      @include w-max($lg) {
+        gap: 48px;
+      }
+
       @include w-max($sm) {
         flex-direction: column;
         align-items: start;
@@ -139,6 +143,10 @@
       h1 {
         color: var(--color-blue-main);
         max-width: 270px;
+
+        @include w-max($lg) {
+          font-size: 48px;
+        }
 
         @include w-max($sm) {
           font-size: 48px;
