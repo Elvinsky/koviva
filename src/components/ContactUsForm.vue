@@ -109,11 +109,11 @@
         gap: var(--space-sm);
         max-width: 420px;
 
-        @include w-max($sm) {
-          max-width: 320px;
-        }
         @include w-max($lg) {
           max-width: 200px;
+        }
+        @include w-max($sm) {
+          max-width: 100%;
         }
       }
 
