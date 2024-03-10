@@ -183,7 +183,7 @@
       }
     }
 
-    @include w-max($sm) {
+    @include w-max($lg) {
       padding-top: var(--space-m);
       gap: var(--space-m);
 
@@ -291,6 +291,13 @@
             flex-direction: column;
             width: 100%;
             gap: var(--space-m);
+
+            @include w-max($lg) {
+              &:first-child {
+                border: 0;
+                padding: 0;
+              }
+            }
           }
         }
       }

@@ -66,7 +66,7 @@
     gap: var(--space-l);
     width: 100%;
 
-    @include w-max($sm) {
+    @include w-max($lg) {
       padding-top: var(--space-l);
     }
 
@@ -94,7 +94,7 @@
       padding-left: var(--space-ml);
       gap: var(--space-s);
 
-      @include w-max($sm) {
+      @include w-max($lg) {
         grid-template-columns: 1fr;
         padding-left: var(--space-xs);
         padding-right: var(--space-xs);
@@ -130,7 +130,7 @@
           justify-content: center;
           gap: var(--space-sm);
 
-          @include w-max($sm) {
+          @include w-max($lg) {
             max-width: 220px;
           }
 
@@ -139,13 +139,13 @@
             color: var(--color-blue-main);
             line-height: 145%;
 
-            @include w-max($sm) {
+            @include w-max($lg) {
               font-size: 18px;
             }
           }
 
           h4 {
-            @include w-max($sm) {
+            @include w-max($lg) {
               font-size: 20px;
             }
           }

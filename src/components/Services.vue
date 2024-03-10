@@ -162,7 +162,7 @@
         line-height: 130%;
       }
 
-      @include w-max($sm) {
+      @include w-max($lg) {
         grid-template-columns: 1fr;
 
         h4 {

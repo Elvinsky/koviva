@@ -10,8 +10,6 @@
 </template>
 
 <script setup>
-  import GreaterThenIcon from '@/assets/icons/Utility/GreaterThenIcon.vue';
-  import BaseButton from './common/BaseButton.vue';
   import BaseContactButton from './common/BaseContactButton.vue';
 </script>
 
@@ -35,7 +33,7 @@
       background-color: var(--color-gray-lighter);
 
       @include w-max($sm) {
-        height: 420px;
+        height: 700px;
       }
     }
 

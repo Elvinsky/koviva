@@ -109,7 +109,7 @@
       transition: all 0.3s ease;
 
       @include w-max($sm) {
-        padding: var(--space-sm) var(--space-xs);
+        padding: var(--space-s) var(--space-xs);
 
         p {
           width: 280px;
@@ -159,7 +159,7 @@
       padding-top: var(--space-s);
 
       @include w-max($sm) {
-        padding: var(--space-sm) var(--space-xs);
+        padding: var(--space-s) var(--space-xs);
 
         p {
           width: 350px;

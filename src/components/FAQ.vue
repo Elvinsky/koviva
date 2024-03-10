@@ -131,7 +131,7 @@
         gap: 48px;
       }
 
-      @include w-max($sm) {
+      @include w-max($lg) {
         flex-direction: column;
         align-items: start;
         justify-content: start;

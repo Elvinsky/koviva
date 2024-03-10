@@ -109,8 +109,11 @@
         gap: var(--space-sm);
         max-width: 420px;
 
-        @include w-max($lg) {
+        @include w-max($sm) {
           max-width: 320px;
+        }
+        @include w-max($lg) {
+          max-width: 200px;
         }
       }
 
@@ -121,7 +124,7 @@
         width: 100%;
         gap: var(--space-m);
 
-        @include w-max($sm) {
+        @include w-max($lg) {
           grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
           grid-template-columns: 1fr;
         }
@@ -130,7 +133,7 @@
           grid-column-start: 1;
           grid-column-end: 3;
 
-          @include w-max($sm) {
+          @include w-max($lg) {
             grid-column-start: 1;
             grid-column-end: 2;
           }
@@ -140,7 +143,7 @@
           grid-column-start: 1;
           grid-column-end: 3;
 
-          @include w-max($sm) {
+          @include w-max($lg) {
             grid-column-start: 1;
             grid-column-end: 2;
           }

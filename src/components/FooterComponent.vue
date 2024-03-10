@@ -167,7 +167,7 @@
         transition: all 0.2s ease-in-out;
 
         a {
-          @include w-max($sm) {
+          @include w-max($lg) {
             display: none;
           }
         }
@@ -180,7 +180,7 @@
           align-items: center;
           justify-content: center;
 
-          @include w-max($sm) {
+          @include w-max($lg) {
             display: flex;
           }
         }
@@ -203,7 +203,7 @@
       width: 100%;
       gap: var(--space-s);
 
-      @include w-max($sm) {
+      @include w-max($lg) {
         display: none;
       }
 

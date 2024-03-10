@@ -21,7 +21,7 @@
   <div class="country-slider--mobile">
     <Carousel
       wrapAround
-      :items-to-show="1.4"
+      :items-to-show="1.3"
       mouse-drag
       :autoplay="900"
       :transition="2000"

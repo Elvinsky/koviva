@@ -289,7 +289,7 @@
   }
 
   .burger-menu {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -305,7 +305,7 @@
     background-color: var(--color-white-main);
 
     .icon {
-      position: absolute;
+      position: fixed;
       top: 24px;
       right: 24px;
     }
