@@ -20,33 +20,41 @@
           class="contactus__content__form__input"
           type="text"
           name="name"
+          v-model="formData.name"
           :placeholder="i18Instance.global.t('contactus.name')"
         />
         <input
           class="contactus__content__form__input"
           type="text"
           name="surname"
+          v-model="formData.surname"
           :placeholder="i18Instance.global.t('contactus.surname')"
         />
         <input
           class="contactus__content__form__input"
           type="tel"
           name="tel"
+          v-model="formData.tel"
           :placeholder="i18Instance.global.t('contactus.tel')"
         />
         <input
           class="contactus__content__form__input"
           type="email"
           name="email"
+          v-model="formData.email"
           :placeholder="i18Instance.global.t('contactus.email')"
         />
         <input
           class="contactus__content__form__input--msg"
           type="text"
           name="msg"
+          v-model="formData.msg"
           :placeholder="i18Instance.global.t('contactus.msg')"
         />
-        <BaseButton class="contactus__content__form__submit">
+        <BaseButton
+          class="contactus__content__form__submit"
+          @click="sendForm"
+        >
           {{ $t('contactus.submit') }}
         </BaseButton>
       </form>
@@ -57,8 +65,53 @@
 <script setup lang="ts">
   import { i18Instance } from '@/i18n';
   import BaseButton from './common/BaseButton.vue';
+  import { ref } from 'vue';
+  import axios from 'axios';
 
-  // Your script code here
+  const formData = ref({
+    name: '',
+    surname: '',
+    tel: '',
+    email: '',
+    msg: '',
+  });
+
+  const sendForm = async () => {
+    axios
+      .post('http://localhost:3000/send-email', {
+        from: formData.value.email,
+        subject: 'Formularz odwołania Koviva',
+        text: `<div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+
+  <div style="background-color: #ffffff; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+
+    <form id="emailForm">
+      <div style="margin-bottom: 10px;">
+        <label style="display: block; font-weight: bold; margin-bottom: 5px;" for="name">Full Nanme:</label>
+        <div style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">${formData.value.name} ${formData.value.surname}</div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label style="display: block; font-weight: bold; margin-bottom: 5px;" for="tel">Telephone:</label>
+        <div style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><a href="tel:${formData.value.tel}">${formData.value.tel}</a></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label style="display: block; font-weight: bold; margin-bottom: 5px;" for="email">Email:</label>
+        <div style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><a href="mailto:${formData.value.email}">${formData.value.email}</a></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label style="display: block; font-weight: bold; margin-bottom: 5px;" for="msg">Message:</label>
+        <div style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; min-height: 100px;">${formData.value.msg}</div>
+      </div>
+    </form>
+
+  </div>
+
+</div>`,
+      })
+      .catch(() => {
+        alert('Failed to send email. Check the console for details.');
+      });
+  };
 </script>
 
 <style scoped lang="scss">
