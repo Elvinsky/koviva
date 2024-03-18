@@ -54,7 +54,7 @@
             variant="i18n"
             class="i18n-buttons__item"
             :selected="lang === 'en-US'"
-            @click="changeLang('en-US')"
+            @click="changeI18Language('en')"
           >
             EN
           </BaseButton>
@@ -62,7 +62,7 @@
             variant="i18n"
             class="i18n-buttons__item"
             :selected="lang === 'ru-RU'"
-            @click="changeLang('ru-RU')"
+            @click="changeI18Language('ru')"
           >
             RU
           </BaseButton>
@@ -70,7 +70,7 @@
             variant="i18n"
             class="i18n-buttons__item"
             :selected="lang === 'pl-PL'"
-            @click="changeLang('pl-PL')"
+            @click="changeI18Language('pl')"
           >
             PL
           </BaseButton>
@@ -81,24 +81,24 @@
       <BaseButton
         variant="i18n"
         class="i18n-buttons__item"
-        :selected="lang === 'en-US'"
-        @click="changeLang('en-US')"
+        :selected="lang === 'en'"
+        @click="changeI18Language('en')"
       >
         EN
       </BaseButton>
       <BaseButton
         variant="i18n"
         class="i18n-buttons__item"
-        :selected="lang === 'ru-RU'"
-        @click="changeLang('ru-RU')"
+        :selected="lang === 'ru'"
+        @click="changeI18Language('ru')"
       >
         RU
       </BaseButton>
       <BaseButton
         variant="i18n"
         class="i18n-buttons__item"
-        :selected="lang === 'pl-PL'"
-        @click="changeLang('pl-PL')"
+        :selected="lang === 'pl'"
+        @click="changeI18Language('pl-')"
       >
         PL
       </BaseButton>
@@ -108,9 +108,7 @@
 
 <script setup>
   import BaseButton from '../components/common/BaseButton.vue';
-  import { useLanguage } from '../composables/useLaguage';
-
-  const { lang, changeLang } = useLanguage();
+  import { changeI18Language } from '@/i18n';
 
   const smoothScroll = targetId => {
     const targetElement = document.getElementById(targetId);

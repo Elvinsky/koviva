@@ -17,8 +17,6 @@
 <script setup>
   import 'vue3-carousel/dist/carousel.css';
   import HeaderComponent from '@/components/HeaderComponent.vue';
-  import { onMounted } from 'vue';
-  import { i18n } from './main';
   import About from './components/About.vue';
   import Advantages from './components/Advantages.vue';
   import Services from './components/Services.vue';
@@ -29,10 +27,6 @@
   import ContactUsForm from './components/ContactUsForm.vue';
   import Contacts from './components/Contacts.vue';
   import FooterComponent from './components/FooterComponent.vue';
-
-  onMounted(() => {
-    i18n.global.locale.value = localStorage.getItem('lang');
-  });
 </script>
 
 <style scoped lang="scss">

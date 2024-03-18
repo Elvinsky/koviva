@@ -60,24 +60,24 @@
     <BaseButton
       variant="i18n"
       class="i18n-buttons__item"
-      :selected="lang === 'en-US'"
-      @click="changeLang('en-US')"
+      :selected="lang === 'en'"
+      @click="changeI18Language('en')"
     >
       EN
     </BaseButton>
     <BaseButton
       variant="i18n"
       class="i18n-buttons__item"
-      :selected="lang === 'ru-RU'"
-      @click="changeLang('ru-RU')"
+      :selected="lang === 'ru'"
+      @click="changeI18Language('ru')"
     >
       RU
     </BaseButton>
     <BaseButton
       variant="i18n"
       class="i18n-buttons__item"
-      :selected="lang === 'pl-PL'"
-      @click="changeLang('pl-PL')"
+      :selected="lang === 'pl'"
+      @click="changeI18Language('pl')"
     >
       PL
     </BaseButton>
@@ -155,11 +155,9 @@
 <script setup>
   import BurgerIcon from '@/assets/icons/Mobile/BurgerIcon.vue';
   import BaseButton from '../components/common/BaseButton.vue';
-  import { useLanguage } from '../composables/useLaguage';
   import { ref } from 'vue';
   import CloseBurgerIcon from '@/assets/icons/Mobile/CloseBurgerIcon.vue';
-
-  const { lang, changeLang } = useLanguage();
+  import { changeI18Language } from '@/i18n';
 
   const smoothScroll = (targetId, fromBurger) => {
     const targetElement = document.getElementById(targetId);

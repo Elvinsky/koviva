@@ -1,19 +1,19 @@
-import { i18n } from '@/main';
-import { ref } from 'vue';
+// import { i18n } from '@/main';
+// import { ref } from 'vue';
 
-const lang = ref(localStorage.getItem('lang') || 'en-US');
+// const lang = ref(localStorage.getItem('lang') || 'en-US');
 
-export const useLanguage = () => {
+// export const useLanguage = () => {
 
-  const changeLang = language => {
-    lang.value = language;
-    i18n.global.locale.value = language
-    localStorage.setItem('lang', language);
-  };
+//   const changeLang = language => {
+//     lang.value = language;
+//     i18n.global.locale.value = language
+//     localStorage.setItem('lang', language);
+//   };
 
-  const setupLocale = () => {
-    i18n.global.locale.value = lang
-  }
+//   const setupLocale = () => {
+//     i18n.global.locale.value = lang
+//   }
 
-  return { lang, changeLang, setupLocale };
-};
+//   return { lang, changeLang, setupLocale };
+// };

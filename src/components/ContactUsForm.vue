@@ -20,31 +20,31 @@
           class="contactus__content__form__input"
           type="text"
           name="name"
-          :placeholder="i18n.global.t('contactus.name')"
+          :placeholder="i18Instance.global.t('contactus.name')"
         />
         <input
           class="contactus__content__form__input"
           type="text"
           name="surname"
-          :placeholder="i18n.global.t('contactus.surname')"
+          :placeholder="i18Instance.global.t('contactus.surname')"
         />
         <input
           class="contactus__content__form__input"
           type="tel"
           name="tel"
-          :placeholder="i18n.global.t('contactus.tel')"
+          :placeholder="i18Instance.global.t('contactus.tel')"
         />
         <input
           class="contactus__content__form__input"
           type="email"
           name="email"
-          :placeholder="i18n.global.t('contactus.email')"
+          :placeholder="i18Instance.global.t('contactus.email')"
         />
         <input
           class="contactus__content__form__input--msg"
           type="text"
           name="msg"
-          :placeholder="i18n.global.t('contactus.msg')"
+          :placeholder="i18Instance.global.t('contactus.msg')"
         />
         <BaseButton class="contactus__content__form__submit">
           {{ $t('contactus.submit') }}
@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-  import { i18n } from '@/main';
+  import { i18Instance } from '@/i18n';
   import BaseButton from './common/BaseButton.vue';
 
   // Your script code here
