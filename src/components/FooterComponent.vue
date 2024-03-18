@@ -103,10 +103,15 @@
         PL
       </BaseButton>
     </div>
+    <div class="icon">
+      <FooterIcon />
+      <p>&#169;2024 Resolute Devs</p>
+    </div>
   </div>
 </template>
 
 <script setup>
+  import FooterIcon from '@/assets/icons/FooterIcon.vue';
   import BaseButton from '../components/common/BaseButton.vue';
   import { changeI18Language } from '@/i18n';
 
@@ -207,6 +212,26 @@
 
       &__item {
         width: fit-content;
+      }
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 100%;
+      justify-content: start;
+      gap: 32px;
+
+      p {
+        font-size: 18px;
+        font-family: var(--font-roboto-regular);
+        line-height: 80%;
+        color: #454545;
+      }
+
+      @include w-max($sm) {
+        justify-content: space-between;
       }
     }
   }
