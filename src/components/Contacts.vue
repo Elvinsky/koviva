@@ -37,9 +37,9 @@
           <h4>{{ $t('contacts.email') }}</h4>
           <a
             class="p1"
-            href="mailto:koviva.sp@gmail.com"
+            href="mailto:info@koviva.pl"
           >
-            koviva.sp@gmail.com
+            info@koviva.pl
           </a>
         </div>
         <EmailIcon class="contacts__content__item__icon" />
@@ -52,8 +52,6 @@
   import EmailIcon from '@/assets/icons/services/EmailIcon.vue';
   import MapIcon from '@/assets/icons/services/MapIcon.vue';
   import PhoneIcon from '@/assets/icons/services/PhoneIcon.vue';
-
-  // Your script code here
 </script>
 
 <style scoped lang="scss">

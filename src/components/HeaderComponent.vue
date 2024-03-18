@@ -155,9 +155,11 @@
 <script setup>
   import BurgerIcon from '@/assets/icons/Mobile/BurgerIcon.vue';
   import BaseButton from '../components/common/BaseButton.vue';
-  import { ref } from 'vue';
+  import { computed, ref } from 'vue';
   import CloseBurgerIcon from '@/assets/icons/Mobile/CloseBurgerIcon.vue';
-  import { changeI18Language } from '@/i18n';
+  import { changeI18Language, i18Instance } from '@/i18n';
+
+  const lang = computed(() => i18Instance.global.locale.value);
 
   const smoothScroll = (targetId, fromBurger) => {
     const targetElement = document.getElementById(targetId);

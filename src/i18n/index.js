@@ -1,5 +1,5 @@
 
-import { isRef } from 'vue';
+import { isRef, ref } from 'vue';
 import { createI18n } from 'vue-i18n';
 
 import ru from './locales/ru.json'
@@ -19,8 +19,10 @@ const options = {
 }),
 };
 
+
 const createLocales = () => {
   const initialLocale = getInitialLocale();
+  const currentLocale = ref('')
 
   const i18Instance = createI18n({
     ...options,
@@ -46,6 +48,7 @@ const createLocales = () => {
     }
 
     setLocaleI18nStorage(locale);
+    currentLocale.value=locale
   };
 
   return {
@@ -55,4 +58,4 @@ const createLocales = () => {
   };
 };
 
-export const { changeI18Language, i18Instance, initialLocale } = createLocales();
+export const { changeI18Language, i18Instance, initialLocale, currentLocale } = createLocales();

@@ -105,7 +105,12 @@
     </div>
     <div class="icon">
       <FooterIcon />
-      <p>&#169;2024 Resolute Devs</p>
+      <a
+        href="https://resolutedevs.com/"
+        target="_blank"
+      >
+        &#169;2024 Resolute Devs
+      </a>
     </div>
   </div>
 </template>
@@ -223,7 +228,7 @@
       justify-content: start;
       gap: 32px;
 
-      p {
+      a {
         font-size: 18px;
         font-family: var(--font-roboto-regular);
         line-height: 80%;
