@@ -118,7 +118,10 @@
 <script setup>
   import FooterIcon from '@/assets/icons/FooterIcon.vue';
   import BaseButton from '../components/common/BaseButton.vue';
-  import { changeI18Language } from '@/i18n';
+  import { changeI18Language, i18Instance } from '@/i18n';
+  import { computed } from 'vue';
+
+  const lang = computed(() => i18Instance.global.locale.value);
 
   const smoothScroll = targetId => {
     const targetElement = document.getElementById(targetId);
