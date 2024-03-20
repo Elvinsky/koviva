@@ -98,7 +98,7 @@
         variant="i18n"
         class="i18n-buttons__item"
         :selected="lang === 'pl'"
-        @click="changeI18Language('pl-')"
+        @click="changeI18Language('pl')"
       >
         PL
       </BaseButton>

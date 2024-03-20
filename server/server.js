@@ -24,11 +24,11 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { from, subject, text } = req.body;
+  const {subject, text } = req.body;
 
   const mailOptions = {
-    from: from || process.env.USER_MAIL,
-    to: process.env.USER_MAIL,
+    from: process.env.USER_MAIL,
+    to: 'info@koviva.pl',
     subject: subject || 'Test Email',
     html: text || 'This is a test email sent from Node.js using nodemailer.',
   };
